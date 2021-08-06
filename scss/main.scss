@@ -1,0 +1,101 @@
+@use './partials';
+@use './partials/config';
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+a{
+   
+  text-decoration: none; 
+  color:config.$main-color;
+}
+
+ul{
+  text-decoration: none;
+  list-style: none;
+}
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+
+body{
+  font-family: config.$ff-pt-regular;
+  height: 100%;
+}
+ 
+
+button{
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+
+.container{
+  max-width: 76rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
+
+.wrapper{
+  min-height: 100%;
+  display:flex;
+  flex-direction: column;
+}
+
+.main{
+  flex: 1 1 auto;
+}
+
+.button{
+  text-decoration: none;
+  display: block;
+  max-width:100%;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 0.5em;
+  font-family: config.$ff-pt-bold;
+  font-size: .9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  transition: .2s;
+   
+  @include config.mq-768{
+      max-width: 50%;
+  }
+  @include config.mq-1280{
+      max-width: 13rem;
+  }
+}
+ 

@@ -1,0 +1,129 @@
+@use './config';
+
+.header__mobile-button{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    margin-left: 1.25rem;
+    &-burger {
+        position: absolute;
+        right: 0;
+        top: 0.5rem;
+        width: 18.6px;
+        height: 2.1px;
+        background: black;
+       
+    
+        &::before {
+          content: '';
+          position: absolute;
+          top: -6px;
+          right:0;
+          width: 18.6px;
+          height: 2.1px;
+          background: black;
+          
+        }
+    
+        &::after {
+          content: '';
+          position: absolute;
+          top: 6px;
+          right:0;
+          width: 18.6px;
+          height: 2.1px;
+          background: black;
+          
+        }
+}
+}
+
+.header {
+    margin-bottom: 2.5rem;
+    @include config.mq-1280{
+        margin-bottom: 5rem;
+    }
+    &__wrapper {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+       
+    }
+
+    &__logo {
+        max-width: 5.5rem;
+        @include config.mq-1024{
+            max-width: 100%;
+        }
+    }
+    &__search{
+        display:none;
+        margin-left: 1.5rem;
+        &-input{
+            border:none;
+            outline: none;
+            padding-left: 2rem;
+             background: url(../../img/search.png) no-repeat left;
+        }
+        @include config.mq-1024{
+            display:block;
+            
+        }
+    }
+    &__mobile {
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        @include config.mq-1024{
+            display:none;
+        }
+    }
+
+        &__nav {
+            display: none;
+            margin-left: auto;
+            @include config.mq-1024{
+                display:block;
+            }
+        }
+
+		&__nav-list {
+            display: flex;
+            align-items: center;
+        }
+
+		&__nav-item {
+            list-style: none;
+            margin-left: 1rem;
+             
+        }
+
+		&__nav-link {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            color: config.$main-color;
+            font-size: 1rem;
+            
+            &:hover{
+                font-family: config.$ff-pt-bold;
+            }
+            &:hover rect {
+                fill:config.$main-color;
+            } 
+            &:hover path{
+                fill:#46D1DA;
+            }
+            &-svg{
+                padding-right: 0.5rem;
+                box-sizing: content-box;
+            }
+        }
+}
+
+rect, path{
+    transition: .2s;
+  }
+
+ 
+   

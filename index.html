@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sass starter project</title>
+  <link rel="stylesheet" href="dist/css/main.css">
+</head>
+
+<body>
+  <div class="wrapper">
+     <!-- HEADER START -->
+      <header class="header">
+        <div class="container">
+          <div class="header__wrapper">
+            <div class="header__logo">
+              <a href=""><img src="img/logo.png" alt="logo"></a>
+            </div>
+
+            <div class="header__search">
+              <input class="header__search-input" type="text" placeholder="Поиск">
+            </div>
+            <nav class="header__nav">
+              <ul class="header__nav-list">
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">Все темы</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">
+                    <svg class="header__nav-link-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="24" rx="6" fill="#F5F6F7"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.36255 10.0736C5.31441 9.5234 5.7214 9.03837 6.27158 8.99024L17.2297 8.03152C17.7799 7.98339 18.2649 8.39038 18.3131 8.94056L18.4874 10.933C18.5355 11.4831 18.1285 11.9682 17.5784 12.0163L6.62021 12.975C6.07002 13.0232 5.58499 12.6162 5.53686 12.066L5.36255 10.0736ZM17.3169 9.02772L6.35874 9.98643L6.53305 11.9788L17.4912 11.0201L17.3169 9.02772Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.0313 11.9352C7.30639 11.9111 7.54891 12.1146 7.57298 12.3897L7.96518 16.8726L16.9309 16.0882L16.5387 11.6053C16.5147 11.3302 16.7182 11.0877 16.9932 11.0636C17.2683 11.0396 17.5109 11.2431 17.5349 11.5181L17.9271 16.001C17.9502 16.2652 17.8675 16.5278 17.697 16.731C17.5265 16.9341 17.2823 17.0613 17.0181 17.0844L8.05233 17.8688C7.78813 17.8919 7.52556 17.8091 7.32239 17.6386C7.11922 17.4681 6.9921 17.2239 6.96898 16.9597L6.57678 12.4769C6.55271 12.2018 6.75621 11.9592 7.0313 11.9352Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.7501 8.51087C12.0251 8.4868 12.2677 8.69029 12.2917 8.96538L12.989 16.9349C13.013 17.21 12.8095 17.4526 12.5345 17.4766C12.2594 17.5007 12.0168 17.2972 11.9928 17.0221L11.2955 9.05254C11.2715 8.77745 11.475 8.53493 11.7501 8.51087Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70471 5.41021C10.2329 5.36385 10.7579 5.52913 11.1643 5.86973C11.4426 6.10325 11.636 6.43835 11.7736 6.75589C11.9149 7.08175 12.0179 7.43759 12.0928 7.75842C12.1681 8.08121 12.2176 8.3808 12.2483 8.59904C12.2637 8.70853 12.2745 8.79848 12.2816 8.86177C12.2851 8.89343 12.2876 8.91848 12.2894 8.93603L12.2914 8.95665L12.2919 8.96255L12.2921 8.96436C12.2921 8.96436 12.2921 8.96539 11.794 9.00897C11.8376 9.50707 11.8374 9.50709 11.8374 9.50709L11.8366 9.50716L11.8348 9.50731L11.8289 9.50781L11.8082 9.50944C11.7906 9.51078 11.7655 9.5126 11.7337 9.51464C11.6702 9.51871 11.5797 9.52368 11.4692 9.52752C11.249 9.53516 10.9453 9.53842 10.6144 9.52032C10.2854 9.50233 9.91709 9.46263 9.57165 9.38011C9.23503 9.2997 8.87166 9.16761 8.59336 8.93409C8.18737 8.59303 7.93322 8.10453 7.88715 7.5763C7.84109 7.04806 8.00667 6.52316 8.3475 6.11698C8.68833 5.71079 9.17651 5.45657 9.70471 5.41021ZM9.23615 8.16805C9.34088 8.25592 9.52892 8.34177 9.80399 8.40748C10.0702 8.47107 10.3738 8.50567 10.669 8.52181C10.8702 8.53282 11.0618 8.53495 11.2268 8.53296C11.2001 8.37012 11.1647 8.18185 11.1189 7.98558C11.0518 7.69774 10.965 7.40475 10.8561 7.1536C10.7437 6.89414 10.6265 6.72387 10.5218 6.63598M10.5218 6.63598C10.3186 6.46581 10.0562 6.38321 9.79215 6.40638C9.52805 6.42956 9.28396 6.55667 9.11355 6.75976C8.94313 6.96286 8.86034 7.22531 8.88337 7.48942C8.9064 7.75344 9.03328 7.99752 9.23615 8.16805M11.794 9.00897L11.8374 9.50709C11.9695 9.49553 12.0918 9.43195 12.1771 9.33037C12.2623 9.22878 12.3036 9.09646 12.2921 8.96436L11.794 9.00897Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M13.2269 5.102C12.6987 5.14806 12.2104 5.402 11.8693 5.80799C11.6358 6.08628 11.5035 6.44988 11.4231 6.78649C11.3406 7.13194 11.3009 7.50027 11.2829 7.82921C11.2648 8.16017 11.2681 8.46381 11.2757 8.68407C11.2795 8.79458 11.2845 8.88504 11.2886 8.94858C11.2906 8.98037 11.2924 9.00549 11.2938 9.02308L11.2954 9.04372L11.2959 9.04962L11.2961 9.05143C11.2961 9.05143 11.2962 9.05247 11.7943 9.00889C11.8378 9.50699 11.838 9.50697 11.838 9.50697L11.8389 9.5069L11.8407 9.50674L11.8466 9.5062L11.8672 9.50422C11.8847 9.50249 11.9098 9.49992 11.9415 9.4964C12.0047 9.48938 12.0947 9.47857 12.2042 9.46315C12.4224 9.43243 12.722 9.38292 13.0448 9.30762C13.3656 9.23279 13.7215 9.12973 14.0473 8.98848C14.3649 8.85084 14.6998 8.65765 14.9333 8.37936C15.2739 7.97298 15.4394 7.44776 15.393 6.91956C15.3466 6.39135 15.0924 5.90318 14.6862 5.56235C14.2801 5.22152 13.7552 5.05593 13.2269 5.102ZM14.1673 7.73657C14.0794 7.8413 13.9091 7.95849 13.6496 8.07096C13.3985 8.17983 13.1055 8.26663 12.8176 8.33377C12.6214 8.37955 12.4331 8.41491 12.2703 8.44161C12.2683 8.2766 12.2704 8.08505 12.2814 7.88382C12.2976 7.58869 12.3321 7.28508 12.3957 7.01884C12.4614 6.74379 12.5473 6.55576 12.6352 6.45102M12.6352 6.45102C12.8057 6.24816 13.0498 6.12124 13.3138 6.09822C13.5779 6.07518 13.8404 6.15798 14.0435 6.32839C14.2466 6.49881 14.3737 6.74289 14.3968 7.007C14.42 7.271 14.3374 7.53341 14.1673 7.73657M11.7943 9.00889L11.838 9.50697C11.7059 9.51853 11.5744 9.47716 11.4729 9.39192C11.3713 9.30668 11.3076 9.18354 11.2961 9.05143L11.7943 9.00889Z" fill="#0A1E30"/>
+                      </svg>
+                      Подписка</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">Приложение</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">FAQ</a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="24" rx="6" fill="#F5F6F7"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M7.28996 6.68227C7.46044 6.4791 7.70464 6.35198 7.96885 6.32886L14.9422 5.71877C15.2064 5.69565 15.469 5.77844 15.6722 5.94892C15.8753 6.1194 16.0024 6.3636 16.0256 6.62781L16.9843 17.586C17.0001 17.767 16.9165 17.9424 16.7658 18.0441C16.6151 18.1457 16.4211 18.1575 16.2592 18.075L12.3345 16.0751L8.81759 18.726C8.67244 18.8355 8.47935 18.8575 8.31329 18.7836C8.14723 18.7096 8.03437 18.5514 8.01853 18.3704L7.05981 7.41221C7.0367 7.148 7.11948 6.88543 7.28996 6.68227ZM15.0294 6.71496L8.05601 7.32505L8.93609 17.3845L11.9821 15.0884C12.1348 14.9733 12.3397 14.9554 12.5101 15.0422L15.9095 16.7745L15.0294 6.71496Z" fill="#0A1E30"/>
+                      </svg>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="24" rx="6" fill="#F5F6F7"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6934 8.49109C11.9685 8.46702 12.211 8.67052 12.2351 8.94561L12.4966 11.9342C12.5206 12.2093 12.3171 12.4518 12.042 12.4759C11.7669 12.4999 11.5244 12.2964 11.5004 12.0213L11.2389 9.03277C11.2148 8.75767 11.4183 8.51516 11.6934 8.49109Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5456 11.7665C11.6623 11.5162 11.9598 11.4079 12.2101 11.5246L14.929 12.7925C15.1793 12.9092 15.2876 13.2067 15.1709 13.457C15.0542 13.7072 14.7567 13.8155 14.5064 13.6988L11.7875 12.4309C11.5372 12.3142 11.4289 12.0167 11.5456 11.7665Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.59575 7.75232C5.87085 7.72825 6.11336 7.93175 6.13743 8.20684L6.31174 10.1992L8.30413 10.0249C8.57922 10.0009 8.82174 10.2043 8.84581 10.4794C8.86987 10.7545 8.66638 10.997 8.39129 11.0211L5.9008 11.239C5.62571 11.2631 5.38319 11.0596 5.35912 10.7845L5.14123 8.294C5.11717 8.0189 5.32066 7.77639 5.59575 7.75232Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3198 6.21757C11.4591 5.8855 12.6713 5.89872 13.803 6.25557C14.9348 6.61241 15.9353 7.29685 16.6781 8.22233C17.4209 9.14781 17.8725 10.2728 17.976 11.4549C18.0794 12.6371 17.8299 13.8234 17.2592 14.8638C16.6884 15.9042 15.8219 16.752 14.7693 17.2999C13.7167 17.8479 12.5252 18.0714 11.3456 17.9422C10.166 17.813 9.05113 17.3369 8.14208 16.5741C7.93054 16.3966 7.90295 16.0813 8.08045 15.8697C8.25795 15.6582 8.57333 15.6306 8.78486 15.8081C9.54241 16.4437 10.4714 16.8405 11.4545 16.9482C12.4375 17.0558 13.4304 16.8695 14.3075 16.4129C15.1847 15.9563 15.9068 15.2498 16.3824 14.3828C16.8581 13.5158 17.066 12.5272 16.9798 11.5421C16.8936 10.5569 16.5172 9.61948 15.8982 8.84825C15.2792 8.07702 14.4455 7.50665 13.5023 7.20928C12.5592 6.91191 11.5491 6.90089 10.5997 7.17762C9.65026 7.45434 8.80424 8.00638 8.16858 8.76393L6.24022 11.0621C6.06272 11.2736 5.74734 11.3012 5.5358 11.1237C5.32426 10.9462 5.29667 10.6308 5.47417 10.4193L7.40254 8.12114C8.16532 7.21209 9.18055 6.54964 10.3198 6.21757Z" fill="#0A1E30"/>
+                      </svg>
+                  </a>
+                </li>
+                <li class="header__nav-item">
+                  <a href="" class="header__nav-link">
+                    <svg class="header__nav-link-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="24" rx="6" fill="#F5F6F7"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5427 6.51977C9.61705 6.68824 8.19258 8.38585 8.36105 10.3115C8.52952 12.2371 10.2271 13.6616 12.1528 13.4931C14.0784 13.3247 15.5029 11.627 15.3344 9.7014C15.1659 7.77576 13.4683 6.35129 11.5427 6.51977ZM7.36486 10.3986C7.14825 7.92282 8.97971 5.74018 11.4555 5.52357C13.9314 5.30696 16.114 7.13842 16.3306 9.61425C16.5472 12.0901 14.7158 14.2727 12.2399 14.4893C9.76411 14.7059 7.58146 12.8745 7.36486 10.3986Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2398 14.4893C11.103 14.5888 10.0125 14.9856 9.07764 15.64C8.14281 16.2943 7.39665 17.1832 6.9141 18.2172C6.79733 18.4675 6.49981 18.5757 6.24957 18.4589C5.99933 18.3421 5.89114 18.0446 6.00792 17.7944C6.56467 16.6013 7.42559 15.5757 8.50418 14.8207C9.58277 14.0657 10.8411 13.6079 12.1526 13.4932C13.4642 13.3784 14.7829 13.6109 15.9762 14.1671C17.1695 14.7234 18.1954 15.5839 18.9508 16.6621C19.1093 16.8883 19.0544 17.2001 18.8282 17.3585C18.6021 17.517 18.2903 17.4621 18.1318 17.2359C17.4771 16.3014 16.5879 15.5556 15.5537 15.0735C14.5194 14.5914 13.3765 14.3899 12.2398 14.4893Z" fill="#0A1E30"/>
+                      </svg>
+                      Войти</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="header__mobile">
+                  <button class="header__mobile-search">
+                    <img src="img/search.png" alt="search">
+                  </button>
+                  <button class="header__mobile-button">
+                    <span class="header__mobile-button-burger">
+                    </span>
+                  </button>
+            </div>
+        </div>
+        </div>
+      </header>
+     <!-- HEADER END -->
+   <main class="main"> 
+   <!-- INTRO START -->
+      <section class="intro">
+        <div class="container">
+          <div class="intro__wrapper">
+            <div class="intro__picture">
+              <img src="img/intro.png" alt="woman" class="intro__picture-img">
+            </div>
+            <div class="intro__text">
+              <h1 class="intro__text-title">Более  1000 аудиолекций</h1>
+              <p class="intro__text-subtitle">Постигайте знания в любой теме начиная с литературы и заканчивая естественными науками.</p>
+              <a href="" class="intro__text-button button">выбрать тему</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- INTRO END -->
+<!-- PLAYER START -->
+    <div class="player">
+        <div class="container">
+          <h2 class="player__title">
+            Последние новинки
+            </h2>
+            <div class="player__wrapper">
+              <div class="player__pic">
+                <button class="player__pic-btn"><svg class="player__pic-btn-small" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" fill="#F5F6F7"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6963 13.3789C20.2014 13.884 20.2014 14.7031 19.6963 15.2082L15.1229 19.7816L19.6963 24.355C20.2014 24.8601 20.2014 25.6791 19.6963 26.1843C19.1911 26.6895 18.3721 26.6895 17.8669 26.1843L12.3789 20.6963C12.1363 20.4537 12 20.1247 12 19.7816C12 19.4385 12.1363 19.1095 12.3789 18.8669L17.8669 13.3789C18.3721 12.8737 19.1911 12.8737 19.6963 13.3789Z" fill="#0A1E30"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M12 19.7813C12 19.0669 12.5791 18.4878 13.2936 18.4878H26.229C26.9435 18.4878 27.5226 19.0669 27.5226 19.7813C27.5226 20.4957 26.9435 21.0749 26.229 21.0749H13.2936C12.5791 21.0749 12 20.4957 12 19.7813Z" fill="#0A1E30"/>
+                  </svg>
+
+                  <svg class="player__pic-btn-big" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.4941 0.964949C14.3361 1.80689 14.3361 3.17194 13.4941 4.01388L5.87184 11.6362L13.4941 19.2584C14.3361 20.1004 14.3361 21.4654 13.4941 22.3074C12.6522 23.1493 11.2871 23.1493 10.4452 22.3074L1.29845 13.1606C0.894133 12.7563 0.666992 12.2079 0.666992 11.6362C0.666992 11.0644 0.894133 10.516 1.29845 10.1117L10.4452 0.964949C11.2871 0.123012 12.6522 0.123012 13.4941 0.964949Z" fill="#0A1E30"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.666992 11.6359C0.666992 10.4452 1.63223 9.47998 2.82291 9.47998H24.3821C25.5728 9.47998 26.538 10.4452 26.538 11.6359C26.538 12.8266 25.5728 13.7918 24.3821 13.7918H2.82291C1.63223 13.7918 0.666992 12.8266 0.666992 11.6359Z" fill="#0A1E30"/>
+                    </svg>
+                    
+                  </button>
+                <img src="img/player/player.jpg" alt="" class="player__pic-img">
+                <button class="player__pic-btn-right"><svg class="player__pic-btn-small" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="40" height="40" rx="8" transform="matrix(-1 0 0 1 40 0)" fill="#F5F6F7"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M20.3037 13.3789C19.7986 13.884 19.7986 14.7031 20.3037 15.2082L24.8771 19.7816L20.3037 24.355C19.7986 24.8601 19.7986 25.6791 20.3037 26.1843C20.8089 26.6895 21.6279 26.6895 22.1331 26.1843L27.6211 20.6963C27.8637 20.4537 28 20.1247 28 19.7816C28 19.4385 27.8637 19.1095 27.6211 18.8669L22.1331 13.3789C21.6279 12.8737 20.8089 12.8737 20.3037 13.3789Z" fill="#0A1E30"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M28 19.7813C28 19.0669 27.4209 18.4878 26.7064 18.4878H13.771C13.0565 18.4878 12.4774 19.0669 12.4774 19.7813C12.4774 20.4957 13.0565 21.0749 13.771 21.0749H26.7064C27.4209 21.0749 28 20.4957 28 19.7813Z" fill="#0A1E30"/>
+                  </svg>
+
+                  <svg class="player__pic-btn-big" width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5059 0.964949C12.6639 1.80689 12.6639 3.17194 13.5059 4.01388L21.1282 11.6362L13.5059 19.2584C12.6639 20.1004 12.6639 21.4654 13.5059 22.3074C14.3478 23.1493 15.7129 23.1493 16.5548 22.3074L25.7016 13.1606C26.1059 12.7563 26.333 12.2079 26.333 11.6362C26.333 11.0644 26.1059 10.516 25.7016 10.1117L16.5548 0.964949C15.7129 0.123012 14.3478 0.123012 13.5059 0.964949Z" fill="#0A1E30"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26.333 11.6359C26.333 10.4452 25.3678 9.47998 24.1771 9.47998H2.61793C1.42725 9.47998 0.462009 10.4452 0.462009 11.6359C0.462009 12.8266 1.42725 13.7918 2.61793 13.7918H24.1771C25.3678 13.7918 26.333 12.8266 26.333 11.6359Z" fill="#0A1E30"/>
+                    </svg>
+                  </button>
+              </div>
+              <div class="player__item">
+                <div class="player__item-control">
+
+                  <div class="player__item-play">
+
+                    <div class="player__item-play-wrap">
+                      
+                  <input   class="player__item-line" type="range" min="0" max="100">
+                  <span class="player__item-time player__item-time-start">02:19</span>
+                  <span class="player__item-time player__item-time-end">07:29</span>
+                    </div>
+
+                  <span class="player__item-pic"><svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9902 4.69672C19.2831 4.40383 19.7579 4.40383 20.0508 4.69672C20.7473 5.39316 21.2997 6.21995 21.6766 7.1299C22.0535 8.03984 22.2475 9.01511 22.2475 10C22.2475 10.9849 22.0535 11.9602 21.6766 12.8701C21.2997 13.7801 20.7473 14.6069 20.0508 15.3033C19.7579 15.5962 19.2831 15.5962 18.9902 15.3033C18.6973 15.0104 18.6973 14.5356 18.9902 14.2427C19.5473 13.6855 19.9893 13.0241 20.2908 12.2961C20.5923 11.5682 20.7475 10.788 20.7475 10C20.7475 9.21209 20.5923 8.43188 20.2908 7.70392C19.9893 6.97597 19.5473 6.31453 18.9902 5.75738C18.6973 5.46449 18.6973 4.98961 18.9902 4.69672Z" fill="#0A1E30"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5795 0.326269C13.8368 0.452122 14 0.713556 14 1.00001V19C14 19.2865 13.8368 19.5479 13.5795 19.6737C13.3222 19.7996 13.0157 19.7679 12.7895 19.592L6.24267 14.5H2C1.60218 14.5 1.22065 14.342 0.93934 14.0607C0.658035 13.7794 0.5 13.3978 0.5 13L0.5 7.00001C0.5 6.60218 0.658035 6.22065 0.93934 5.93935C1.22064 5.65804 1.60217 5.50001 2 5.50001H6.24267L12.7895 0.407992C13.0157 0.232128 13.3222 0.200417 13.5795 0.326269Z" fill="#0A1E30"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 5.5C6.91421 5.5 7.25 5.83579 7.25 6.25V13.75C7.25 14.1642 6.91421 14.5 6.5 14.5C6.08579 14.5 5.75 14.1642 5.75 13.75V6.25C5.75 5.83579 6.08579 5.5 6.5 5.5Z" fill="#0A1E30"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3378 7.34858C16.6307 7.05568 17.1056 7.05568 17.3985 7.34858C17.7467 7.6968 18.0229 8.11019 18.2114 8.56516C18.3998 9.02013 18.4968 9.50777 18.4968 10.0002C18.4968 10.4927 18.3998 10.9803 18.2114 11.4353C18.0229 11.8903 17.7467 12.3037 17.3985 12.6519C17.1056 12.9448 16.6307 12.9448 16.3378 12.6519C16.0449 12.359 16.0449 11.8841 16.3378 11.5912C16.5468 11.3823 16.7125 11.1342 16.8256 10.8613C16.9386 10.5883 16.9968 10.2957 16.9968 10.0002C16.9968 9.70475 16.9386 9.41217 16.8256 9.13919C16.7125 8.86621 16.5468 8.61817 16.3378 8.40924C16.0449 8.11634 16.0449 7.64147 16.3378 7.34858Z" fill="#0A1E30"/>
+                    </svg>
+                    </span>
+                  <input class="player__item-volume" type="range" min="0" max="100">
+                  </div>
+                   <div class="player__item-buttons">
+                     <button class="player__item-buttons-back" type="button">
+                      <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9711 0.587665C14.2376 0.582679 14.5005 0.64876 14.7329 0.779109C14.9654 0.909458 15.1589 1.09937 15.2935 1.32931C15.4282 1.55926 15.4992 1.82093 15.4992 2.0874V15.9128C15.4992 16.1793 15.4282 16.441 15.2935 16.6709C15.1589 16.9009 14.9654 17.0908 14.7329 17.2211C14.5005 17.3515 14.2376 17.4175 13.9711 17.4126C13.7047 17.4076 13.4444 17.3317 13.217 17.1927L1.90533 10.28C1.68607 10.146 1.5049 9.95797 1.37921 9.73385C1.25351 9.50972 1.1875 9.25707 1.1875 9.00011C1.1875 8.74315 1.25351 8.4905 1.37921 8.26637C1.5049 8.04225 1.68606 7.85418 1.90533 7.72019L13.217 0.80748C13.4444 0.668525 13.7047 0.592651 13.9711 0.587665Z" fill="#0A1E30"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 0C1.66421 0 2 0.335786 2 0.75V17.25C2 17.6642 1.66421 18 1.25 18C0.835786 18 0.5 17.6642 0.5 17.25L0.5 0.75C0.5 0.335786 0.835786 0 1.25 0Z" fill="#0A1E30"/>
+                        </svg>
+                    </button>
+                    <button class="player__item-buttons-play" type="button"><svg width="22" height="26" viewBox="0 0 22 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.0217 0.257067C1.3316 0.0832678 1.6822 -0.00483685 2.03745 0.00181551C2.39269 0.00846792 2.73975 0.109636 3.04292 0.294916L21.04 11.2935C21.3323 11.4722 21.5739 11.7229 21.7415 12.0217C21.9091 12.3206 21.9971 12.6574 21.9971 13C21.9971 13.3427 21.9091 13.6795 21.7415 13.9783C21.5739 14.2772 21.3323 14.5279 21.04 14.7066L3.04293 25.7052C2.73975 25.8905 2.39268 25.9916 2.03745 25.9983C1.6822 26.0049 1.3316 25.9168 1.0217 25.743C0.711797 25.5692 0.453794 25.316 0.274225 25.0094C0.0946555 24.7028 1.78814e-07 24.3539 0 23.9986L0 2.00146C1.78814e-07 1.64616 0.0946547 1.29726 0.274225 0.990673C0.453795 0.684083 0.711799 0.430866 1.0217 0.257067Z" fill="#0A1E30"/>
+                      </svg>
+                    </button>
+                    <button class="player__item-buttons-next" type="button"><svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M1.26626 0.779109C1.49869 0.648759 1.76164 0.582679 2.02807 0.587665C2.2945 0.592651 2.5548 0.668525 2.78218 0.80748L14.0939 7.72019C14.3131 7.85418 14.4943 8.04225 14.62 8.26637C14.7457 8.4905 14.8117 8.74315 14.8117 9.00011C14.8117 9.25707 14.7457 9.50972 14.62 9.73385C14.4943 9.95797 14.3131 10.146 14.0939 10.28L2.78218 17.1927C2.5548 17.3317 2.2945 17.4076 2.02807 17.4126C1.76163 17.4175 1.49868 17.3515 1.26626 17.2211C1.03384 17.0908 0.840343 16.9009 0.705666 16.6709C0.57099 16.441 0.5 16.1793 0.5 15.9128L0.5 2.0874C0.5 1.82092 0.57099 1.55925 0.705666 1.32931C0.840342 1.09937 1.03384 0.909459 1.26626 0.779109Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M14.75 0C15.1642 0 15.5 0.335786 15.5 0.75V17.25C15.5 17.6642 15.1642 18 14.75 18C14.3358 18 14 17.6642 14 17.25V0.75C14 0.335786 14.3358 0 14.75 0Z" fill="#0A1E30"/>
+                      </svg>
+                      </button>
+                    <button class="player__item-buttons-speed" type="button"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect width="24" height="23.9999" rx="6" fill="#0A1E30"/>
+                      <path d="M10.1412 12.743L12.6642 15.5579L9.99595 15.7913C9.83583 15.5307 9.54996 15.1545 9.13835 14.663L8.85983 14.3296C8.82244 14.3979 8.7782 14.4704 8.72709 14.5472C8.68316 14.6233 8.63985 14.7066 8.59717 14.797C8.47129 15.0104 8.35227 15.2196 8.24011 15.4245C8.13512 15.6289 8.04976 15.8098 7.98404 15.9673L5.31583 16.2008L7.31164 12.9906L4.88796 10.3189L7.54541 10.0864C7.6634 10.2784 7.88436 10.5735 8.20828 10.9716L8.61039 11.4785L8.87117 10.9895C9.13288 10.5112 9.31139 10.1559 9.4067 9.92354L12.0642 9.69105L10.1412 12.743Z" fill="white"/>
+                      <path d="M17.6717 13.1141C18.316 13.0433 18.7917 12.9872 19.0989 12.9459L19.2768 14.9793L13.5853 15.4773L13.4074 13.4438C14.1846 13.4048 14.7704 13.368 15.1649 13.3335L14.8401 9.62164C14.6315 10.2109 14.1363 10.6228 13.3546 10.8574C13.259 10.0129 13.1127 9.24878 12.9155 8.56497C13.4824 8.43587 13.872 8.30421 14.0843 8.16999C14.3032 8.02798 14.4673 7.87991 14.5767 7.72579C14.6933 7.57105 14.7708 7.46669 14.8095 7.41271L14.8076 7.3912L17.1531 7.186L17.6717 13.1141Z" fill="white"/>
+                      </svg></button>
+                   </div>
+                </div>
+
+                <div class="player__item-text">
+                  <div class="player__item-tags">
+                    <p class="player__item-tag">ИСКУССТВО</p>
+                    <p class="player__item-tag">МОЗАИКИ</p>
+                  </div>
+                  <h4 class="player__item-title">
+                    Мозаики Равенны V-VII веков. Золотой век Равенны
+                  </h4>
+                  <p class="player__item-subtitle">
+                    Равеннские мозаики – явление уникальное в истории раннехристианского и византийского искусства. Они известны во всем мире.
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+        </div>
+    </div>
+    <!-- PLAYER END -->
+
+    <!-- LECTURES START -->
+    <div class="lectures">
+      <div class="container"> 
+
+        <!-- LECTURES 1 -->
+
+        <a href="" class="lectures__link">
+          Искусство  
+       </a>
+      <div class="lectures__items">
+        
+        <div class="lectures__item">
+           <h4 class="lectures__item-title">
+            Представляя необычное
+           </h4>
+
+           <div class="lectures__item-cards">
+            <div class="lectures__item-card">
+              <div class="lectures__item-card-pic">
+                <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+              </div>
+              <div class="lectures__item-card-description">
+                 <p class="lectures__item-card-title">
+                 Мозаики Равенны V-VII веков. Золотой век Равенны
+                </p>
+                <span class="lectures__item-card-time">
+                 01:02:19
+                </span>
+              </div>
+            </div>
+ 
+            <div class="lectures__item-card">
+             <div class="lectures__item-card-pic">
+               <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+             </div>
+             <div class="lectures__item-card-description">
+               <p class="lectures__item-card-title">
+               Мозаики Равенны V-VII веков. Золотой век Равенны
+              </p>
+              <span class="lectures__item-card-time">
+               01:02:19
+              </span>
+            </div>
+           </div>
+ 
+           <div class="lectures__item-card">
+             <div class="lectures__item-card-pic">
+               <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+             </div>
+             <div class="lectures__item-card-description">
+               <p class="lectures__item-card-title">
+                 Равеннские мозаики – явление уникальное в истории раннехристианского 
+              </p>
+              <span class="lectures__item-card-time">
+               01:02:19
+              </span>
+            </div>
+           </div>
+ 
+           <div class="lectures__item-card">
+             <div class="lectures__item-card-pic">
+               <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+             </div>
+             <div class="lectures__item-card-description">
+               <p class="lectures__item-card-title">
+               Мозаики Равенны V-VII веков. Золотой век Равенны
+              </p>
+              <span class="lectures__item-card-time">
+               01:02:19
+              </span>
+            </div>
+           </div>
+ 
+           <div class="lectures__item-card">
+             <div class="lectures__item-card-pic">
+               <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+             </div>
+             <div class="lectures__item-card-description">
+               <p class="lectures__item-card-title">
+               Мозаики Равенны V-VII веков. Золотой век Равенны
+              </p>
+              <span class="lectures__item-card-time">
+               01:02:19
+              </span>
+            </div>
+           </div>
+           </div>
+
+          <div class="lectures__item-end">
+            <a href="" class="lectures__item-link">
+              82 лекции
+            </a>
+          </div>
+        </div>
+
+        <div class="lectures__item">
+          <h4 class="lectures__item-title">
+           Представляя необычное
+          </h4>
+
+          <div class="lectures__item-cards">
+           <div class="lectures__item-card">
+             <div class="lectures__item-card-pic">
+               <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+             </div>
+             <div class="lectures__item-card-description">
+                <p class="lectures__item-card-title">
+                Мозаики Равенны V-VII веков. Золотой век Равенны
+               </p>
+               <span class="lectures__item-card-time">
+                01:02:19
+               </span>
+             </div>
+           </div>
+
+           <div class="lectures__item-card">
+            <div class="lectures__item-card-pic">
+              <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+            </div>
+            <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+              Мозаики Равенны V-VII веков. Золотой век Равенны
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+          </div>
+
+          <div class="lectures__item-card">
+            <div class="lectures__item-card-pic">
+              <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+            </div>
+            <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+                Равеннские мозаики – явление уникальное в истории раннехристианского 
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+          </div>
+
+          <div class="lectures__item-card">
+            <div class="lectures__item-card-pic">
+              <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+            </div>
+            <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+              Мозаики Равенны V-VII веков. Золотой век Равенны
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+          </div>
+
+          <div class="lectures__item-card">
+            <div class="lectures__item-card-pic">
+              <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+            </div>
+            <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+              Мозаики Равенны V-VII веков. Золотой век Равенны
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+          </div>
+          </div>
+
+         <div class="lectures__item-end">
+           <a href="" class="lectures__item-link">
+             82 лекции
+           </a>
+         </div>
+       </div>
+
+       <div class="lectures__item">
+        <h4 class="lectures__item-title">
+         Представляя необычное
+        </h4>
+
+        <div class="lectures__item-cards">
+         <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+              Мозаики Равенны V-VII веков. Золотой век Равенны
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+         </div>
+
+         <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+              Равеннские мозаики – явление уникальное в истории раннехристианского 
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+ 
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+        </div>
+
+       <div class="lectures__item-end">
+         <a href="" class="lectures__item-link">
+           82 лекции
+         </a>
+       </div>
+     </div>
+     
+      </div>
+
+      <!-- LECTURES 2 -->
+
+      <a href="" class="lectures__link">
+        Музыка  
+     </a>
+    <div class="lectures__items">
+      
+      <div class="lectures__item">
+         <h4 class="lectures__item-title">
+          Представляя необычное
+         </h4>
+
+         <div class="lectures__item-cards">
+          <div class="lectures__item-card">
+            <div class="lectures__item-card-pic">
+              <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+            </div>
+            <div class="lectures__item-card-description">
+               <p class="lectures__item-card-title">
+               Мозаики Равенны V-VII веков. Золотой век Равенны
+              </p>
+              <span class="lectures__item-card-time">
+               01:02:19
+              </span>
+            </div>
+          </div>
+
+          <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+             <p class="lectures__item-card-title">
+             Мозаики Равенны V-VII веков. Золотой век Равенны
+            </p>
+            <span class="lectures__item-card-time">
+             01:02:19
+            </span>
+          </div>
+         </div>
+
+         <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+             <p class="lectures__item-card-title">
+               Равеннские мозаики – явление уникальное в истории раннехристианского 
+            </p>
+            <span class="lectures__item-card-time">
+             01:02:19
+            </span>
+          </div>
+         </div>
+
+         <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+             <p class="lectures__item-card-title">
+             Мозаики Равенны V-VII веков. Золотой век Равенны
+            </p>
+            <span class="lectures__item-card-time">
+             01:02:19
+            </span>
+          </div>
+         </div>
+
+         <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+             <p class="lectures__item-card-title">
+             Мозаики Равенны V-VII веков. Золотой век Равенны
+            </p>
+            <span class="lectures__item-card-time">
+             01:02:19
+            </span>
+          </div>
+         </div>
+         </div>
+
+        <div class="lectures__item-end">
+          <a href="" class="lectures__item-link">
+            82 лекции
+          </a>
+        </div>
+      </div>
+
+      <div class="lectures__item">
+        <h4 class="lectures__item-title">
+         Представляя необычное
+        </h4>
+
+        <div class="lectures__item-cards">
+         <div class="lectures__item-card">
+           <div class="lectures__item-card-pic">
+             <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+           </div>
+           <div class="lectures__item-card-description">
+              <p class="lectures__item-card-title">
+              Мозаики Равенны V-VII веков. Золотой век Равенны
+             </p>
+             <span class="lectures__item-card-time">
+              01:02:19
+             </span>
+           </div>
+         </div>
+
+         <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+              Равеннские мозаики – явление уникальное в истории раннехристианского 
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+        </div>
+        </div>
+
+       <div class="lectures__item-end">
+         <a href="" class="lectures__item-link">
+           82 лекции
+         </a>
+       </div>
+     </div>
+
+     <div class="lectures__item">
+      <h4 class="lectures__item-title">
+       Представляя необычное
+      </h4>
+
+      <div class="lectures__item-cards">
+       <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+       </div>
+
+       <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+
+      <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+            Равеннские мозаики – явление уникальное в истории раннехристианского 
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+
+      <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+      </div>
+
+     <div class="lectures__item-end">
+       <a href="" class="lectures__item-link">
+         82 лекции
+       </a>
+     </div>
+   </div>
+   
+    </div>
+
+    <!-- LECTURES 3 -->
+
+    <a href="" class="lectures__link">
+      История  
+   </a>
+  <div class="lectures__items">
+    
+    <div class="lectures__item">
+       <h4 class="lectures__item-title">
+        Представляя необычное
+       </h4>
+
+       <div class="lectures__item-cards">
+        <div class="lectures__item-card">
+          <div class="lectures__item-card-pic">
+            <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+          </div>
+          <div class="lectures__item-card-description">
+             <p class="lectures__item-card-title">
+             Мозаики Равенны V-VII веков. Золотой век Равенны
+            </p>
+            <span class="lectures__item-card-time">
+             01:02:19
+            </span>
+          </div>
+        </div>
+
+        <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+           <p class="lectures__item-card-title">
+           Мозаики Равенны V-VII веков. Золотой век Равенны
+          </p>
+          <span class="lectures__item-card-time">
+           01:02:19
+          </span>
+        </div>
+       </div>
+
+       <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+           <p class="lectures__item-card-title">
+             Равеннские мозаики – явление уникальное в истории раннехристианского 
+          </p>
+          <span class="lectures__item-card-time">
+           01:02:19
+          </span>
+        </div>
+       </div>
+
+       <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+           <p class="lectures__item-card-title">
+           Мозаики Равенны V-VII веков. Золотой век Равенны
+          </p>
+          <span class="lectures__item-card-time">
+           01:02:19
+          </span>
+        </div>
+       </div>
+
+       <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+           <p class="lectures__item-card-title">
+           Мозаики Равенны V-VII веков. Золотой век Равенны
+          </p>
+          <span class="lectures__item-card-time">
+           01:02:19
+          </span>
+        </div>
+       </div>
+       </div>
+
+      <div class="lectures__item-end">
+        <a href="" class="lectures__item-link">
+          82 лекции
+        </a>
+      </div>
+    </div>
+
+    <div class="lectures__item">
+      <h4 class="lectures__item-title">
+       Представляя необычное
+      </h4>
+
+      <div class="lectures__item-cards">
+       <div class="lectures__item-card">
+         <div class="lectures__item-card-pic">
+           <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+         </div>
+         <div class="lectures__item-card-description">
+            <p class="lectures__item-card-title">
+            Мозаики Равенны V-VII веков. Золотой век Равенны
+           </p>
+           <span class="lectures__item-card-time">
+            01:02:19
+           </span>
+         </div>
+       </div>
+
+       <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+
+      <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+            Равеннские мозаики – явление уникальное в истории раннехристианского 
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+
+      <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+
+      <div class="lectures__item-card">
+        <div class="lectures__item-card-pic">
+          <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+        </div>
+        <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+      </div>
+      </div>
+
+     <div class="lectures__item-end">
+       <a href="" class="lectures__item-link">
+         82 лекции
+       </a>
+     </div>
+   </div>
+
+   <div class="lectures__item">
+    <h4 class="lectures__item-title">
+     Представляя необычное
+    </h4>
+
+    <div class="lectures__item-cards">
+     <div class="lectures__item-card">
+       <div class="lectures__item-card-pic">
+         <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+       </div>
+       <div class="lectures__item-card-description">
+          <p class="lectures__item-card-title">
+          Мозаики Равенны V-VII веков. Золотой век Равенны
+         </p>
+         <span class="lectures__item-card-time">
+          01:02:19
+         </span>
+       </div>
+     </div>
+
+     <div class="lectures__item-card">
+      <div class="lectures__item-card-pic">
+        <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+      </div>
+      <div class="lectures__item-card-description">
+        <p class="lectures__item-card-title">
+        Мозаики Равенны V-VII веков. Золотой век Равенны
+       </p>
+       <span class="lectures__item-card-time">
+        01:02:19
+       </span>
+     </div>
+    </div>
+
+    <div class="lectures__item-card">
+      <div class="lectures__item-card-pic">
+        <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+      </div>
+      <div class="lectures__item-card-description">
+        <p class="lectures__item-card-title">
+          Равеннские мозаики – явление уникальное в истории раннехристианского 
+       </p>
+       <span class="lectures__item-card-time">
+        01:02:19
+       </span>
+     </div>
+    </div>
+
+    <div class="lectures__item-card">
+      <div class="lectures__item-card-pic">
+        <img src="img/player/player.jpg" alt="" class="lectures__item-card-pic-img">
+      </div>
+      <div class="lectures__item-card-description">
+        <p class="lectures__item-card-title">
+        Мозаики Равенны V-VII веков. Золотой век Равенны
+       </p>
+       <span class="lectures__item-card-time">
+        01:02:19
+       </span>
+     </div>
+    </div>
+    </div>
+
+   <div class="lectures__item-end">
+     <a href="" class="lectures__item-link">
+       82 лекции
+     </a>
+   </div>
+ </div>
+ 
+  </div>
+  
+   <a href="" class="lectures__btn button">Все темы</a>
+   
+    </div>
+    </div>
+<!-- LECTURES END -->
+
+<!-- LISTEN START -->
+   <div class="listen">
+    <div class="container">
+      <div class="listen__wrapper">
+        <div class="listen__info">
+          <h3 class="listen__info-text">
+            Слушайте нас, где вам удобно
+          </h3>
+          <div class="listen__info-apps">
+            <a class="listen__info-apps-link" href="">
+              <svg class="listen__info-apps-svg"   viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect   rx="6.21714" fill="#0A1E30"/>
+                <path d="M70.6404 21.7519C68.271 21.7519 66.3398 23.5409 66.3398 26.0049C66.3398 28.4539 68.271 30.2578 70.6404 30.2578C73.0108 30.2578 74.942 28.4539 74.942 26.0049C74.941 23.5409 73.0098 21.7519 70.6404 21.7519ZM70.6404 28.5839C69.3419 28.5839 68.2226 27.5209 68.2226 26.0059C68.2226 24.4749 69.3429 23.4278 70.6404 23.4278C71.9389 23.4278 73.0582 24.4749 73.0582 26.0059C73.0582 27.5199 71.9389 28.5839 70.6404 28.5839ZM61.2574 21.7519C58.888 21.7519 56.9568 23.5409 56.9568 26.0049C56.9568 28.4539 58.888 30.2578 61.2574 30.2578C63.6278 30.2578 65.559 28.4539 65.559 26.0049C65.559 23.5409 63.6278 21.7519 61.2574 21.7519ZM61.2574 28.5839C59.9589 28.5839 58.8396 27.5209 58.8396 26.0059C58.8396 24.4749 59.9599 23.4278 61.2574 23.4278C62.556 23.4278 63.6752 24.4749 63.6752 26.0059C63.6762 27.5199 62.556 28.5839 61.2574 28.5839ZM50.0973 23.0578V24.8619H54.4473C54.3174 25.8769 53.9769 26.6179 53.4571 27.1329C52.8244 27.7608 51.8341 28.4538 50.0973 28.4538C47.4197 28.4538 45.3263 26.3109 45.3263 23.6529C45.3263 20.9949 47.4197 18.8519 50.0973 18.8519C51.542 18.8519 52.5967 19.4159 53.3755 20.1409L54.6579 18.8679C53.5699 17.8369 52.1263 17.0479 50.0973 17.0479C46.4294 17.0479 43.3457 20.0119 43.3457 23.6529C43.3457 27.2939 46.4294 30.2578 50.0973 30.2578C52.0769 30.2578 53.5709 29.6128 54.7385 28.4049C55.9393 27.2128 56.3131 25.5368 56.3131 24.1838C56.3131 23.7658 56.2808 23.3789 56.2153 23.0569H50.0973V23.0578ZM95.741 24.4589C95.3843 23.5089 94.2963 21.7519 92.073 21.7519C89.8658 21.7519 88.0313 23.4759 88.0313 26.0049C88.0313 28.3889 89.8496 30.2578 92.2835 30.2578C94.247 30.2578 95.3833 29.0659 95.8548 28.3729L94.3941 27.4058C93.9075 28.1148 93.2416 28.5819 92.2835 28.5819C91.3265 28.5819 90.6445 28.1468 90.2063 27.2929L95.9354 24.9408L95.741 24.4589ZM89.898 25.8769C89.8496 24.2329 91.1804 23.3959 92.1385 23.3959C92.885 23.3959 93.5176 23.7669 93.7292 24.2979L89.898 25.8769ZM85.2408 30.0008H87.1226V17.4999H85.2408V30.0008ZM82.1561 22.7029H82.0916C81.6695 22.2029 80.8575 21.7519 79.836 21.7519C77.6933 21.7519 75.7298 23.6209 75.7298 26.0219C75.7298 28.4059 77.6933 30.2588 79.836 30.2588C80.8585 30.2588 81.6695 29.8078 82.0916 29.2928H82.1561V29.9048C82.1561 31.5318 81.2796 32.4019 79.8682 32.4019C78.7158 32.4019 78.0015 31.5809 77.7094 30.8879L76.0703 31.5648C76.5408 32.6918 77.79 34.0778 79.8682 34.0778C82.0755 34.0778 83.9422 32.7888 83.9422 29.6468V22.0108H82.1571V22.7029H82.1561ZM79.9982 28.5839C78.6997 28.5839 77.6127 27.5038 77.6127 26.0219C77.6127 24.5229 78.6997 23.4278 79.9982 23.4278C81.2796 23.4278 82.286 24.5229 82.286 26.0219C82.286 27.5038 81.2796 28.5839 79.9982 28.5839ZM104.56 17.4999H100.056V30.0008H101.935V25.2649H104.559C106.642 25.2649 108.691 23.7679 108.691 21.3829C108.691 18.9979 106.643 17.4999 104.56 17.4999ZM104.608 23.5248H101.935V19.2399H104.608C106.013 19.2399 106.811 20.3949 106.811 21.3829C106.811 22.3509 106.013 23.5248 104.608 23.5248ZM116.226 21.7299C114.865 21.7299 113.455 22.3249 112.872 23.6439L114.54 24.3349C114.897 23.6439 115.562 23.4179 116.258 23.4179C117.23 23.4179 118.218 23.9969 118.234 25.0259V25.1549C117.894 24.9619 117.164 24.6729 116.274 24.6729C114.476 24.6729 112.644 25.6539 112.644 27.4869C112.644 29.1599 114.119 30.2368 115.771 30.2368C117.035 30.2368 117.732 29.6739 118.169 29.0139H118.233V29.9789H120.049V25.1859C120.05 22.9679 118.379 21.7299 116.226 21.7299ZM115.998 28.5809C115.383 28.5809 114.524 28.2749 114.524 27.5189C114.524 26.5539 115.594 26.1838 116.518 26.1838C117.343 26.1838 117.733 26.3609 118.234 26.6019C118.088 27.7609 117.084 28.5809 115.998 28.5809ZM126.659 22.0029L124.504 27.4229H124.44L122.204 22.0029H120.179L123.532 29.5778L121.62 33.7918H123.581L128.75 22.0029H126.659ZM109.729 30.0008H111.608V17.4999H109.729V30.0008Z" fill="white"/>
+                <path d="M49.7691 10.2442C49.7691 11.0822 49.5193 11.7492 49.0186 12.2472C48.4504 12.8392 47.709 13.1352 46.7983 13.1352C45.9259 13.1352 45.1834 12.8352 44.5739 12.2352C43.9634 11.6342 43.6582 10.8902 43.6582 10.0022C43.6582 9.11316 43.9634 8.36916 44.5739 7.76916C45.1834 7.16816 45.9259 6.86816 46.7983 6.86816C47.2315 6.86816 47.6455 6.95216 48.0384 7.11916C48.4323 7.28716 48.7476 7.51016 48.9834 7.78916L48.4525 8.31716C48.0525 7.84216 47.5015 7.60516 46.7973 7.60516C46.1606 7.60516 45.6106 7.82716 45.1461 8.27116C44.6817 8.71517 44.45 9.29216 44.45 10.0012C44.45 10.7102 44.6817 11.2872 45.1461 11.7312C45.6106 12.1752 46.1606 12.3972 46.7973 12.3972C47.4722 12.3972 48.0354 12.1742 48.4857 11.7272C48.7778 11.4362 48.9471 11.0312 48.9924 10.5122H46.7973V9.79117H49.7258C49.756 9.94817 49.7691 10.0992 49.7691 10.2442Z" fill="white"/>
+                <path d="M54.4134 7.73822H51.6611V9.64022H54.1434V10.3612H51.6611V12.2632H54.4134V13.0012H50.8844V7.00122H54.4134V7.73822Z" fill="white"/>
+                <path d="M57.6883 13.0012H56.9116V7.73822H55.2232V7.00122H59.3768V7.73822H57.6883V13.0012Z" fill="white"/>
+                <path d="M62.3818 13.0012V7.00122H63.1585V13.0012H62.3818Z" fill="white"/>
+                <path d="M66.603 13.0012H65.8263V7.73822H64.1379V7.00122H68.2914V7.73822H66.603V13.0012Z" fill="white"/>
+                <path d="M76.154 12.2262C75.5596 12.8322 74.8212 13.1352 73.9377 13.1352C73.0542 13.1352 72.3158 12.8322 71.7224 12.2262C71.1281 11.6202 70.8319 10.8782 70.8319 10.0012C70.8319 9.12421 71.1281 8.38221 71.7224 7.77621C72.3158 7.17021 73.0542 6.86621 73.9377 6.86621C74.8162 6.86621 75.5536 7.17121 76.15 7.78021C76.7464 8.38921 77.0446 9.12921 77.0446 10.0012C77.0446 10.8782 76.7474 11.6202 76.154 12.2262ZM72.2956 11.7232C72.7429 12.1732 73.29 12.3972 73.9377 12.3972C74.5855 12.3972 75.1335 12.1722 75.5798 11.7232C76.0271 11.2732 76.2517 10.6992 76.2517 10.0012C76.2517 9.30321 76.0271 8.72921 75.5798 8.27921C75.1335 7.82921 74.5855 7.60521 73.9377 7.60521C73.29 7.60521 72.7429 7.83021 72.2956 8.27921C71.8494 8.72921 71.6247 9.30321 71.6247 10.0012C71.6247 10.6992 71.8494 11.2732 72.2956 11.7232Z" fill="white"/>
+                <path d="M78.1346 13.0012V7.00122H79.0796L82.0172 11.6682H82.0504L82.0172 10.5122V7.00122H82.7939V13.0012H81.9829L78.9093 8.10722H78.8761L78.9093 9.26322V13.0012H78.1346Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2302 7.96936C12.1121 8.23628 12.0469 8.56295 12.0469 8.94269V31.0587C12.0469 31.4393 12.1122 31.766 12.2304 32.0329L24.3503 20.0004L12.2302 7.96936ZM12.9345 32.7563C13.3835 32.9458 13.9687 32.8848 14.6067 32.5257L28.8657 24.4826L25.0667 20.7115L12.9345 32.7563ZM29.78 23.9679L34.2521 21.4457C35.6595 20.6507 35.6595 19.3517 34.2521 18.5577L29.7781 16.0341L25.7831 20.0003L29.78 23.9679ZM28.8644 15.5188L14.6067 7.4767C13.9686 7.11678 13.3834 7.05618 12.9344 7.24605L25.0667 19.2892L28.8644 15.5188Z" fill="white"/>
+                </svg>
+                
+            </a>
+            <a class="listen__info-apps-link" href="">
+              <svg class="listen__info-apps-svg" viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect   rx="6.81657" fill="#0A1E30"/>
+                <path d="M93.7267 19.2691V21.8068H92.1462V23.4711H93.7267V29.1258C93.7267 31.0567 94.5946 31.8291 96.7781 31.8291C97.1618 31.8291 97.5272 31.7831 97.8469 31.7279V30.0821C97.5729 30.1096 97.3993 30.128 97.0978 30.128C96.1203 30.128 95.6909 29.6683 95.6909 28.6201V23.4711H97.8469V21.8068H95.6909V19.2691H93.7267Z" fill="white"/>
+                <path d="M103.409 31.967C106.314 31.967 108.096 30.0085 108.096 26.7628C108.096 23.5354 106.305 21.5678 103.409 21.5678C100.504 21.5678 98.7134 23.5354 98.7134 26.7628C98.7134 30.0085 100.495 31.967 103.409 31.967ZM103.409 30.2108C101.701 30.2108 100.742 28.9511 100.742 26.7628C100.742 24.5928 101.701 23.3239 103.409 23.3239C105.108 23.3239 106.077 24.5928 106.077 26.7628C106.077 28.9419 105.108 30.2108 103.409 30.2108Z" fill="white"/>
+                <path d="M109.62 31.7739H111.584V25.8617C111.584 24.4549 112.635 23.5078 114.124 23.5078C114.471 23.5078 115.056 23.5722 115.22 23.6274V21.6781C115.01 21.6229 114.636 21.5953 114.343 21.5953C113.046 21.5953 111.941 22.3125 111.657 23.2964H111.511V21.7608H109.62V31.7739Z" fill="white"/>
+                <path d="M120.097 23.2504C121.55 23.2504 122.5 24.271 122.546 25.8433H117.521C117.631 24.2802 118.645 23.2504 120.097 23.2504ZM122.537 29.0706C122.171 29.8522 121.358 30.2843 120.17 30.2843C118.599 30.2843 117.585 29.1718 117.521 27.4156V27.3053H124.546V26.6157C124.546 23.4711 122.875 21.5678 120.106 21.5678C117.302 21.5678 115.52 23.5998 115.52 26.7995C115.52 29.9993 117.265 31.967 120.116 31.967C122.39 31.967 123.98 30.8636 124.428 29.0706H122.537Z" fill="white"/>
+                <path d="M80.8458 28.0762C80.9973 30.535 83.0332 32.1074 86.0632 32.1074C89.3016 32.1074 91.328 30.4587 91.328 27.8284C91.328 25.7604 90.1728 24.6168 87.37 23.9592L85.8644 23.5876C84.0842 23.1683 83.3646 22.606 83.3646 21.6244C83.3646 20.3855 84.4819 19.5754 86.1579 19.5754C87.7487 19.5754 88.8471 20.3664 89.046 21.6339H91.1102C90.9871 19.3181 88.9607 17.6885 86.1863 17.6885C83.2036 17.6885 81.2151 19.3181 81.2151 21.7673C81.2151 23.7877 82.3419 24.9885 84.8133 25.5698L86.5746 25.9987C88.3831 26.4275 89.1785 27.0565 89.1785 28.1048C89.1785 29.3247 87.9286 30.211 86.2242 30.211C84.3967 30.211 83.1279 29.3818 82.948 28.0762H80.8458Z" fill="white"/>
+                <path d="M60.4988 21.5953C59.1467 21.5953 57.9774 22.2758 57.3744 23.4159H57.2282V21.7608H55.3371V35.1024H57.3013V30.2568H57.4566C57.9774 31.3142 59.1011 31.9394 60.5171 31.9394C63.0294 31.9394 64.6282 29.9441 64.6282 26.7628C64.6282 23.5814 63.0294 21.5953 60.4988 21.5953ZM59.9416 30.1648C58.2971 30.1648 57.2648 28.8592 57.2648 26.772C57.2648 24.6756 58.2971 23.3699 59.9507 23.3699C61.6134 23.3699 62.6092 24.648 62.6092 26.7628C62.6092 28.8867 61.6134 30.1648 59.9416 30.1648Z" fill="white"/>
+                <path d="M71.5012 21.5953C70.1491 21.5953 68.9798 22.2758 68.3768 23.4159H68.2306V21.7608H66.3395V35.1024H68.3037V30.2568H68.459C68.9798 31.3142 70.1035 31.9394 71.5195 31.9394C74.0318 31.9394 75.6306 29.9441 75.6306 26.7628C75.6306 23.5814 74.0318 21.5953 71.5012 21.5953ZM70.9439 30.1648C69.2995 30.1648 68.2672 28.8592 68.2672 26.772C68.2672 24.6756 69.2995 23.3699 70.9531 23.3699C72.6158 23.3699 73.6116 24.648 73.6116 26.7628C73.6116 28.8867 72.6158 30.1648 70.9439 30.1648Z" fill="white"/>
+                <path d="M51.813 31.7739H54.0666L49.1333 18.022H46.8513L41.918 31.7739H44.0958L45.3552 28.1239H50.5631L51.813 31.7739ZM47.8834 20.5189H48.0444L50.0234 26.3322H45.8949L47.8834 20.5189Z" fill="white"/>
+                <path d="M43.2383 7.64868V14.2827H45.6181C47.5823 14.2827 48.7197 13.0644 48.7197 10.945C48.7197 8.85778 47.5732 7.64868 45.6181 7.64868H43.2383ZM44.2615 8.58654H45.504C46.8698 8.58654 47.6783 9.46004 47.6783 10.9588C47.6783 12.4805 46.8835 13.3448 45.504 13.3448H44.2615V8.58654Z" fill="white"/>
+                <path d="M52.2032 14.3792C53.6558 14.3792 54.5465 13.4 54.5465 11.7771C54.5465 10.1634 53.6512 9.1796 52.2032 9.1796C50.7506 9.1796 49.8553 10.1634 49.8553 11.7771C49.8553 13.4 50.7461 14.3792 52.2032 14.3792ZM52.2032 13.5011C51.349 13.5011 50.8694 12.8713 50.8694 11.7771C50.8694 10.6921 51.349 10.0577 52.2032 10.0577C53.0528 10.0577 53.537 10.6921 53.537 11.7771C53.537 12.8667 53.0528 13.5011 52.2032 13.5011Z" fill="white"/>
+                <path d="M62.132 9.27614H61.1499L60.2637 13.0965H60.1861L59.1628 9.27614H58.2219L57.1987 13.0965H57.1256L56.2348 9.27614H55.239L56.6094 14.2827H57.6189L58.6421 10.5956H58.7198L59.7475 14.2827H60.7662L62.132 9.27614Z" fill="white"/>
+                <path d="M63.263 14.2827H64.2451V11.3541C64.2451 10.5726 64.7064 10.0853 65.4327 10.0853C66.159 10.0853 66.5062 10.4852 66.5062 11.2898V14.2827H67.4883V11.0415C67.4883 9.85081 66.8762 9.1796 65.7662 9.1796C65.017 9.1796 64.5237 9.5152 64.2816 10.0715H64.2085V9.27614H63.263V14.2827Z" fill="white"/>
+                <path d="M69.035 14.2827H70.0171V7.32227H69.035V14.2827Z" fill="white"/>
+                <path d="M73.7106 14.3792C75.1632 14.3792 76.054 13.4 76.054 11.7771C76.054 10.1634 75.1587 9.1796 73.7106 9.1796C72.2581 9.1796 71.3628 10.1634 71.3628 11.7771C71.3628 13.4 72.2535 14.3792 73.7106 14.3792ZM73.7106 13.5011C72.8565 13.5011 72.3768 12.8713 72.3768 11.7771C72.3768 10.6921 72.8565 10.0577 73.7106 10.0577C74.5603 10.0577 75.0445 10.6921 75.0445 11.7771C75.0445 12.8667 74.5603 13.5011 73.7106 13.5011Z" fill="white"/>
+                <path d="M78.9802 13.5333C78.4457 13.5333 78.0574 13.2712 78.0574 12.8207C78.0574 12.3794 78.3681 12.1449 79.0532 12.0989L80.2683 12.0208V12.4391C80.2683 13.0598 79.7202 13.5333 78.9802 13.5333ZM78.7289 14.3654C79.3821 14.3654 79.9257 14.0804 80.2226 13.5793H80.3003V14.2827H81.2458V10.8622C81.2458 9.80484 80.5424 9.1796 79.2953 9.1796C78.1671 9.1796 77.3631 9.73128 77.2626 10.591H78.2128C78.3224 10.237 78.7015 10.0347 79.2497 10.0347C79.9211 10.0347 80.2683 10.3335 80.2683 10.8622V11.2944L78.9208 11.3725C77.7377 11.4461 77.0708 11.9656 77.0708 12.8667C77.0708 13.7816 77.7697 14.3654 78.7289 14.3654Z" fill="white"/>
+                <path d="M84.5786 14.3654C85.2637 14.3654 85.8439 14.039 86.1408 13.4919H86.2184V14.2827H87.1594V7.32227H86.1773V10.0715H86.1042C85.8347 9.5198 85.2592 9.19339 84.5786 9.19339C83.3224 9.19339 82.5139 10.1956 82.5139 11.7771C82.5139 13.3632 83.3133 14.3654 84.5786 14.3654ZM84.8572 10.0807C85.6794 10.0807 86.1956 10.7381 86.1956 11.7817C86.1956 12.8299 85.684 13.4781 84.8572 13.4781C84.0258 13.4781 83.5279 12.8391 83.5279 11.7771C83.5279 10.7243 84.0304 10.0807 84.8572 10.0807Z" fill="white"/>
+                <path d="M93.528 14.3792C94.9805 14.3792 95.8713 13.4 95.8713 11.7771C95.8713 10.1634 94.976 9.1796 93.528 9.1796C92.0754 9.1796 91.1801 10.1634 91.1801 11.7771C91.1801 13.4 92.0708 14.3792 93.528 14.3792ZM93.528 13.5011C92.6738 13.5011 92.1941 12.8713 92.1941 11.7771C92.1941 10.6921 92.6738 10.0577 93.528 10.0577C94.3776 10.0577 94.8618 10.6921 94.8618 11.7771C94.8618 12.8667 94.3776 13.5011 93.528 13.5011Z" fill="white"/>
+                <path d="M97.1713 14.2827H98.1534V11.3541C98.1534 10.5726 98.6148 10.0853 99.3411 10.0853C100.067 10.0853 100.415 10.4852 100.415 11.2898V14.2827H101.397V11.0415C101.397 9.85081 100.785 9.1796 99.6745 9.1796C98.9254 9.1796 98.432 9.5152 98.1899 10.0715H98.1169V9.27614H97.1713V14.2827Z" fill="white"/>
+                <path d="M105.92 8.03026V9.29913H105.129V10.1313H105.92V12.9586C105.92 13.9241 106.354 14.3102 107.445 14.3102C107.637 14.3102 107.82 14.2873 107.98 14.2597V13.4367C107.843 13.4505 107.756 13.4597 107.605 13.4597C107.117 13.4597 106.902 13.2299 106.902 12.7058V10.1313H107.98V9.29913H106.902V8.03026H105.92Z" fill="white"/>
+                <path d="M109.298 14.2827H110.28V11.3587C110.28 10.6002 110.728 10.0899 111.532 10.0899C112.226 10.0899 112.596 10.4944 112.596 11.2944V14.2827H113.578V11.0507C113.578 9.86001 112.925 9.1842 111.865 9.1842C111.116 9.1842 110.591 9.5198 110.349 10.0807H110.271V7.32227H109.298V14.2827Z" fill="white"/>
+                <path d="M117.121 10.0209C117.847 10.0209 118.322 10.5312 118.345 11.3174H115.833C115.888 10.5358 116.395 10.0209 117.121 10.0209ZM118.341 12.931C118.158 13.3218 117.751 13.5379 117.158 13.5379C116.372 13.5379 115.865 12.9816 115.833 12.1035V12.0483H119.346V11.7035C119.346 10.1313 118.51 9.1796 117.126 9.1796C115.723 9.1796 114.833 10.1956 114.833 11.7955C114.833 13.3954 115.705 14.3792 117.13 14.3792C118.268 14.3792 119.062 13.8275 119.286 12.931H118.341Z" fill="white"/>
+                <path d="M31.2604 20.4876C31.2842 18.6256 32.2778 16.8637 33.854 15.8884C32.8597 14.4591 31.1942 13.5529 29.4614 13.4984C27.6132 13.3031 25.8215 14.6114 24.8797 14.6114C23.9197 14.6114 22.4697 13.5178 20.9082 13.5501C18.873 13.6163 16.9756 14.7809 15.9854 16.5717C13.8568 20.2808 15.4445 25.7318 17.4835 28.7299C18.5036 30.1979 19.6959 31.8378 21.2559 31.7797C22.7825 31.7159 23.3527 30.7999 25.1954 30.7999C27.021 30.7999 27.5559 31.7797 29.1476 31.7427C30.7857 31.7159 31.8178 30.2681 32.8021 28.7861C33.5351 27.74 34.0991 26.5839 34.4733 25.3606C32.5482 24.5411 31.2627 22.5913 31.2604 20.4876Z" fill="white"/>
+                <path d="M28.254 11.5267C29.1471 10.4476 29.5871 9.06054 29.4806 7.66016C28.116 7.8044 26.8556 8.46077 25.9504 9.49849C25.0652 10.5124 24.6045 11.875 24.6916 13.2219C26.0566 13.236 27.3986 12.5974 28.254 11.5267Z" fill="white"/>
+                </svg>
+                
+            </a>
+             
+               
+                
+          </div>
+        </div>
+        <div class="listen__mobile">
+          <img src="img/mobile.png" alt="mobile" class="listen__mobile-pic">
+          
+        </div>
+         
+      </div>
+    </div>
+   </div>
+<!--  LISTEN END -->
+  </main>
+  <!-- FOOTER START -->
+   <footer class="footer">
+       <div class="container">
+         <a href="" class="footer__logo">
+             <img src="img/logo-footer.png" alt="" class="footer__logo-img">
+           </a>
+           <div class="footer__wrapper">     
+             
+
+             <div class="footer__list">
+               <h5 class="footer__list-title">ТЕМЫ ЛЕКЦИЙ</h5>
+                <nav class="footer__list-nav">
+                  <ul class="footer__list-items footer__list-items-col">
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Все лекции
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Литература
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        История
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Музыка
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Искусство
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Философия
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Архитектура
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Философия
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Театр
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Кино
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Религия
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Мифология
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Языки
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Мода
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Обучение
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Отношения
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                        Естественные науки
+                      </a>
+                    </li>
+                    <li class="footer__list-item">
+                      <a href="" class="footer__list-link">
+                       Общество
+                      </a>
+                    </li>
+                    </ul>
+                </nav>
+             </div>
+
+             <div class="footer__list footer__list-col">
+              <div class="footer__list-wrap">
+                <h5 class="footer__list-title">СЕРВИС</h5>
+              <nav class="footer__list-nav">
+                <ul class="footer__list-items">
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link">
+                      Подписка
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link footer__list-link-mod">
+                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.593183 6.83263C0.536865 6.21368 1.01304 5.66802 1.65676 5.61386L14.4778 4.53531C15.1215 4.48116 15.689 4.93902 15.7453 5.55798L15.9492 7.79942C16.0056 8.41837 15.5294 8.96404 14.8857 9.01819L2.06465 10.0967C1.42093 10.1509 0.853445 9.69303 0.797128 9.07407L0.593183 6.83263ZM14.5798 5.65603L1.75873 6.73458L1.96268 8.97602L14.7837 7.89747L14.5798 5.65603Z" fill="#46D1DA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.54566 8.92705C2.86752 8.89997 3.15127 9.12891 3.17942 9.43838L3.6383 14.4816L14.1282 13.5992L13.6694 8.55593C13.6412 8.24645 13.8793 7.97362 14.2011 7.94655C14.523 7.91947 14.8067 8.1484 14.8349 8.45788L15.2938 13.5011C15.3208 13.7983 15.224 14.0937 15.0245 14.3223C14.825 14.5509 14.5393 14.6939 14.2302 14.7199L3.74027 15.6023C3.43115 15.6283 3.12395 15.5352 2.88624 15.3434C2.64853 15.1516 2.4998 14.8769 2.47275 14.5797L2.01388 9.53643C1.98572 9.22696 2.22381 8.95412 2.54566 8.92705Z" fill="#46D1DA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.06715 5.07451C8.38901 5.04743 8.67275 5.27637 8.70091 5.58584L9.51669 14.5516C9.54485 14.8611 9.30676 15.1339 8.9849 15.161C8.66304 15.1881 8.3793 14.9591 8.35114 14.6496L7.53536 5.68389C7.5072 5.37442 7.74529 5.10159 8.06715 5.07451Z" fill="#46D1DA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67418 1.58667C6.29218 1.53451 6.90643 1.72046 7.38189 2.10363C7.7075 2.36634 7.93378 2.74333 8.09482 3.10056C8.26008 3.46716 8.38066 3.86748 8.46822 4.2284C8.55631 4.59154 8.61425 4.92858 8.65019 5.1741C8.66822 5.29728 8.68087 5.39847 8.68909 5.46967C8.6932 5.50529 8.69621 5.53347 8.69823 5.55322L8.70055 5.57641L8.70118 5.58305L8.70137 5.58508C8.70137 5.58508 8.70148 5.58625 8.1187 5.63528C8.16969 6.19564 8.16947 6.19565 8.16947 6.19565L8.16848 6.19574L8.16636 6.19591L8.15945 6.19647L8.1353 6.1983C8.11472 6.19981 8.08534 6.20186 8.04814 6.20415C7.97379 6.20873 7.86795 6.21432 7.73866 6.21864C7.48096 6.22724 7.1257 6.2309 6.73848 6.21054C6.35361 6.19031 5.92267 6.14564 5.5185 6.05281C5.12466 5.96234 4.69951 5.81374 4.3739 5.55104C3.89889 5.16734 3.60153 4.61778 3.54764 4.02352C3.49374 3.42926 3.68748 2.83874 4.08625 2.38178C4.48502 1.92482 5.05618 1.63883 5.67418 1.58667ZM5.12596 4.68924C5.24849 4.7881 5.46851 4.88467 5.79034 4.95859C6.10184 5.03014 6.45707 5.06907 6.80236 5.08722C7.03781 5.0996 7.26193 5.102 7.45498 5.09977C7.42375 4.91657 7.38237 4.70477 7.32881 4.48396C7.25025 4.16014 7.1487 3.83053 7.02133 3.54798C6.88975 3.25609 6.75264 3.06453 6.63012 2.96566M6.63012 2.96566C6.39242 2.77422 6.08538 2.68129 5.77649 2.70736C5.46749 2.73344 5.1819 2.87644 4.98252 3.10492C4.78313 3.3334 4.68627 3.62865 4.71321 3.92578C4.74015 4.22281 4.88861 4.4974 5.12596 4.68924M8.1187 5.63528L8.16947 6.19565C8.32403 6.18265 8.46711 6.11113 8.56684 5.99684C8.66657 5.88256 8.71489 5.7337 8.70137 5.58508L8.1187 5.63528Z" fill="#46D1DA"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.79457 1.23999C9.17654 1.29181 8.6052 1.57749 8.20616 2.03423C7.93294 2.34731 7.77819 2.75636 7.6841 3.13505C7.58756 3.52367 7.5411 3.93805 7.52006 4.30811C7.49888 4.68044 7.5027 5.02203 7.51164 5.26982C7.51613 5.39414 7.52194 5.49591 7.52671 5.5674C7.52909 5.60316 7.53122 5.63142 7.53279 5.6512L7.5347 5.67443L7.53528 5.68107L7.53546 5.68311C7.53546 5.68311 7.53556 5.68427 8.11834 5.63525C8.16932 6.19561 8.16954 6.19559 8.16954 6.19559L8.17054 6.19551L8.17265 6.19532L8.17955 6.19472L8.20367 6.19249C8.22421 6.19054 8.25352 6.18765 8.29057 6.1837C8.36461 6.1758 8.46985 6.16363 8.59796 6.14629C8.8533 6.11173 9.20382 6.05603 9.58148 5.97132C9.95685 5.88713 10.3732 5.77119 10.7544 5.61228C11.126 5.45743 11.5178 5.2401 11.791 4.92702C12.1895 4.46985 12.3831 3.87898 12.3289 3.28475C12.2746 2.69052 11.9772 2.14132 11.502 1.75788C11.0267 1.37445 10.4126 1.18817 9.79457 1.23999ZM10.8948 4.20388C10.7919 4.3217 10.5927 4.45355 10.2891 4.58008C9.99528 4.70255 9.65247 4.8002 9.3157 4.87573C9.08607 4.92724 8.86579 4.96702 8.67526 4.99706C8.67294 4.81142 8.67544 4.59593 8.68831 4.36954C8.7072 4.03752 8.74768 3.69596 8.82209 3.39643C8.89896 3.08701 8.99938 2.87547 9.10219 2.75765M9.10219 2.75765C9.3017 2.52942 9.5873 2.38664 9.89621 2.36074C10.2052 2.33483 10.5123 2.42797 10.7499 2.61968C10.9875 2.8114 11.1362 3.086 11.1634 3.38312C11.1905 3.68012 11.0939 3.97533 10.8948 4.20388M8.11834 5.63525L8.16954 6.19559C8.01498 6.20859 7.86116 6.16204 7.74231 6.06615C7.62345 5.97026 7.54898 5.83172 7.53546 5.68311L8.11834 5.63525Z" fill="#46D1DA"/>
+                        </svg>
+                       <span>Подарок</span>  
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link">
+                      О нас
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link">
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="footer__list-wrap">
+                <h5 class="footer__list-title">профиль</h5>
+              <nav class="footer__list-nav">
+                <ul class="footer__list-items">
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link">
+                      Вход
+                    </a>
+                  </li>
+                  <li class="footer__list-item">
+                    <a href="" class="footer__list-link">
+                      Регистрация
+                    </a>
+                  </li>
+                 </ul>
+                </nav>
+              </div>
+
+              <div class="footer__list-wrap footer__list-wrap-lg">
+                <h5 class="footer__list-title">приложения</h5>
+                 <div class="footer__apps">
+                   <a href="" class="footer__apps-link ">
+                    <svg class="footer__apps-svg "   viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect   rx="6.21714" fill="#fff"/>
+                      <path d="M70.6404 21.7519C68.271 21.7519 66.3398 23.5409 66.3398 26.0049C66.3398 28.4539 68.271 30.2578 70.6404 30.2578C73.0108 30.2578 74.942 28.4539 74.942 26.0049C74.941 23.5409 73.0098 21.7519 70.6404 21.7519ZM70.6404 28.5839C69.3419 28.5839 68.2226 27.5209 68.2226 26.0059C68.2226 24.4749 69.3429 23.4278 70.6404 23.4278C71.9389 23.4278 73.0582 24.4749 73.0582 26.0059C73.0582 27.5199 71.9389 28.5839 70.6404 28.5839ZM61.2574 21.7519C58.888 21.7519 56.9568 23.5409 56.9568 26.0049C56.9568 28.4539 58.888 30.2578 61.2574 30.2578C63.6278 30.2578 65.559 28.4539 65.559 26.0049C65.559 23.5409 63.6278 21.7519 61.2574 21.7519ZM61.2574 28.5839C59.9589 28.5839 58.8396 27.5209 58.8396 26.0059C58.8396 24.4749 59.9599 23.4278 61.2574 23.4278C62.556 23.4278 63.6752 24.4749 63.6752 26.0059C63.6762 27.5199 62.556 28.5839 61.2574 28.5839ZM50.0973 23.0578V24.8619H54.4473C54.3174 25.8769 53.9769 26.6179 53.4571 27.1329C52.8244 27.7608 51.8341 28.4538 50.0973 28.4538C47.4197 28.4538 45.3263 26.3109 45.3263 23.6529C45.3263 20.9949 47.4197 18.8519 50.0973 18.8519C51.542 18.8519 52.5967 19.4159 53.3755 20.1409L54.6579 18.8679C53.5699 17.8369 52.1263 17.0479 50.0973 17.0479C46.4294 17.0479 43.3457 20.0119 43.3457 23.6529C43.3457 27.2939 46.4294 30.2578 50.0973 30.2578C52.0769 30.2578 53.5709 29.6128 54.7385 28.4049C55.9393 27.2128 56.3131 25.5368 56.3131 24.1838C56.3131 23.7658 56.2808 23.3789 56.2153 23.0569H50.0973V23.0578ZM95.741 24.4589C95.3843 23.5089 94.2963 21.7519 92.073 21.7519C89.8658 21.7519 88.0313 23.4759 88.0313 26.0049C88.0313 28.3889 89.8496 30.2578 92.2835 30.2578C94.247 30.2578 95.3833 29.0659 95.8548 28.3729L94.3941 27.4058C93.9075 28.1148 93.2416 28.5819 92.2835 28.5819C91.3265 28.5819 90.6445 28.1468 90.2063 27.2929L95.9354 24.9408L95.741 24.4589ZM89.898 25.8769C89.8496 24.2329 91.1804 23.3959 92.1385 23.3959C92.885 23.3959 93.5176 23.7669 93.7292 24.2979L89.898 25.8769ZM85.2408 30.0008H87.1226V17.4999H85.2408V30.0008ZM82.1561 22.7029H82.0916C81.6695 22.2029 80.8575 21.7519 79.836 21.7519C77.6933 21.7519 75.7298 23.6209 75.7298 26.0219C75.7298 28.4059 77.6933 30.2588 79.836 30.2588C80.8585 30.2588 81.6695 29.8078 82.0916 29.2928H82.1561V29.9048C82.1561 31.5318 81.2796 32.4019 79.8682 32.4019C78.7158 32.4019 78.0015 31.5809 77.7094 30.8879L76.0703 31.5648C76.5408 32.6918 77.79 34.0778 79.8682 34.0778C82.0755 34.0778 83.9422 32.7888 83.9422 29.6468V22.0108H82.1571V22.7029H82.1561ZM79.9982 28.5839C78.6997 28.5839 77.6127 27.5038 77.6127 26.0219C77.6127 24.5229 78.6997 23.4278 79.9982 23.4278C81.2796 23.4278 82.286 24.5229 82.286 26.0219C82.286 27.5038 81.2796 28.5839 79.9982 28.5839ZM104.56 17.4999H100.056V30.0008H101.935V25.2649H104.559C106.642 25.2649 108.691 23.7679 108.691 21.3829C108.691 18.9979 106.643 17.4999 104.56 17.4999ZM104.608 23.5248H101.935V19.2399H104.608C106.013 19.2399 106.811 20.3949 106.811 21.3829C106.811 22.3509 106.013 23.5248 104.608 23.5248ZM116.226 21.7299C114.865 21.7299 113.455 22.3249 112.872 23.6439L114.54 24.3349C114.897 23.6439 115.562 23.4179 116.258 23.4179C117.23 23.4179 118.218 23.9969 118.234 25.0259V25.1549C117.894 24.9619 117.164 24.6729 116.274 24.6729C114.476 24.6729 112.644 25.6539 112.644 27.4869C112.644 29.1599 114.119 30.2368 115.771 30.2368C117.035 30.2368 117.732 29.6739 118.169 29.0139H118.233V29.9789H120.049V25.1859C120.05 22.9679 118.379 21.7299 116.226 21.7299ZM115.998 28.5809C115.383 28.5809 114.524 28.2749 114.524 27.5189C114.524 26.5539 115.594 26.1838 116.518 26.1838C117.343 26.1838 117.733 26.3609 118.234 26.6019C118.088 27.7609 117.084 28.5809 115.998 28.5809ZM126.659 22.0029L124.504 27.4229H124.44L122.204 22.0029H120.179L123.532 29.5778L121.62 33.7918H123.581L128.75 22.0029H126.659ZM109.729 30.0008H111.608V17.4999H109.729V30.0008Z" fill="#0A1E30"/>
+                      <path d="M49.7691 10.2442C49.7691 11.0822 49.5193 11.7492 49.0186 12.2472C48.4504 12.8392 47.709 13.1352 46.7983 13.1352C45.9259 13.1352 45.1834 12.8352 44.5739 12.2352C43.9634 11.6342 43.6582 10.8902 43.6582 10.0022C43.6582 9.11316 43.9634 8.36916 44.5739 7.76916C45.1834 7.16816 45.9259 6.86816 46.7983 6.86816C47.2315 6.86816 47.6455 6.95216 48.0384 7.11916C48.4323 7.28716 48.7476 7.51016 48.9834 7.78916L48.4525 8.31716C48.0525 7.84216 47.5015 7.60516 46.7973 7.60516C46.1606 7.60516 45.6106 7.82716 45.1461 8.27116C44.6817 8.71517 44.45 9.29216 44.45 10.0012C44.45 10.7102 44.6817 11.2872 45.1461 11.7312C45.6106 12.1752 46.1606 12.3972 46.7973 12.3972C47.4722 12.3972 48.0354 12.1742 48.4857 11.7272C48.7778 11.4362 48.9471 11.0312 48.9924 10.5122H46.7973V9.79117H49.7258C49.756 9.94817 49.7691 10.0992 49.7691 10.2442Z" fill="#0A1E30"/>
+                      <path d="M54.4134 7.73822H51.6611V9.64022H54.1434V10.3612H51.6611V12.2632H54.4134V13.0012H50.8844V7.00122H54.4134V7.73822Z" fill="#0A1E30"/>
+                      <path d="M57.6883 13.0012H56.9116V7.73822H55.2232V7.00122H59.3768V7.73822H57.6883V13.0012Z" fill="#0A1E30"/>
+                      <path d="M62.3818 13.0012V7.00122H63.1585V13.0012H62.3818Z" fill="#0A1E30"/>
+                      <path d="M66.603 13.0012H65.8263V7.73822H64.1379V7.00122H68.2914V7.73822H66.603V13.0012Z" fill="#0A1E30"/>
+                      <path d="M76.154 12.2262C75.5596 12.8322 74.8212 13.1352 73.9377 13.1352C73.0542 13.1352 72.3158 12.8322 71.7224 12.2262C71.1281 11.6202 70.8319 10.8782 70.8319 10.0012C70.8319 9.12421 71.1281 8.38221 71.7224 7.77621C72.3158 7.17021 73.0542 6.86621 73.9377 6.86621C74.8162 6.86621 75.5536 7.17121 76.15 7.78021C76.7464 8.38921 77.0446 9.12921 77.0446 10.0012C77.0446 10.8782 76.7474 11.6202 76.154 12.2262ZM72.2956 11.7232C72.7429 12.1732 73.29 12.3972 73.9377 12.3972C74.5855 12.3972 75.1335 12.1722 75.5798 11.7232C76.0271 11.2732 76.2517 10.6992 76.2517 10.0012C76.2517 9.30321 76.0271 8.72921 75.5798 8.27921C75.1335 7.82921 74.5855 7.60521 73.9377 7.60521C73.29 7.60521 72.7429 7.83021 72.2956 8.27921C71.8494 8.72921 71.6247 9.30321 71.6247 10.0012C71.6247 10.6992 71.8494 11.2732 72.2956 11.7232Z" fill="#0A1E30"/>
+                      <path d="M78.1346 13.0012V7.00122H79.0796L82.0172 11.6682H82.0504L82.0172 10.5122V7.00122H82.7939V13.0012H81.9829L78.9093 8.10722H78.8761L78.9093 9.26322V13.0012H78.1346Z" fill="#0A1E30"/>
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2302 7.96936C12.1121 8.23628 12.0469 8.56295 12.0469 8.94269V31.0587C12.0469 31.4393 12.1122 31.766 12.2304 32.0329L24.3503 20.0004L12.2302 7.96936ZM12.9345 32.7563C13.3835 32.9458 13.9687 32.8848 14.6067 32.5257L28.8657 24.4826L25.0667 20.7115L12.9345 32.7563ZM29.78 23.9679L34.2521 21.4457C35.6595 20.6507 35.6595 19.3517 34.2521 18.5577L29.7781 16.0341L25.7831 20.0003L29.78 23.9679ZM28.8644 15.5188L14.6067 7.4767C13.9686 7.11678 13.3834 7.05618 12.9344 7.24605L25.0667 19.2892L28.8644 15.5188Z" fill="#0A1E30"/>
+                      </svg>
+                   </a>
+
+                   <a href="" class="footer__apps-link ">
+                    <svg class="footer__apps-svg " viewBox="0 0 140 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <rect   rx="6.81657" fill="#fff"/>
+                      <path d="M93.7267 19.2691V21.8068H92.1462V23.4711H93.7267V29.1258C93.7267 31.0567 94.5946 31.8291 96.7781 31.8291C97.1618 31.8291 97.5272 31.7831 97.8469 31.7279V30.0821C97.5729 30.1096 97.3993 30.128 97.0978 30.128C96.1203 30.128 95.6909 29.6683 95.6909 28.6201V23.4711H97.8469V21.8068H95.6909V19.2691H93.7267Z" fill="#0A1E30"/>
+                      <path d="M103.409 31.967C106.314 31.967 108.096 30.0085 108.096 26.7628C108.096 23.5354 106.305 21.5678 103.409 21.5678C100.504 21.5678 98.7134 23.5354 98.7134 26.7628C98.7134 30.0085 100.495 31.967 103.409 31.967ZM103.409 30.2108C101.701 30.2108 100.742 28.9511 100.742 26.7628C100.742 24.5928 101.701 23.3239 103.409 23.3239C105.108 23.3239 106.077 24.5928 106.077 26.7628C106.077 28.9419 105.108 30.2108 103.409 30.2108Z" fill="#0A1E30"/>
+                      <path d="M109.62 31.7739H111.584V25.8617C111.584 24.4549 112.635 23.5078 114.124 23.5078C114.471 23.5078 115.056 23.5722 115.22 23.6274V21.6781C115.01 21.6229 114.636 21.5953 114.343 21.5953C113.046 21.5953 111.941 22.3125 111.657 23.2964H111.511V21.7608H109.62V31.7739Z" fill="#0A1E30"/>
+                      <path d="M120.097 23.2504C121.55 23.2504 122.5 24.271 122.546 25.8433H117.521C117.631 24.2802 118.645 23.2504 120.097 23.2504ZM122.537 29.0706C122.171 29.8522 121.358 30.2843 120.17 30.2843C118.599 30.2843 117.585 29.1718 117.521 27.4156V27.3053H124.546V26.6157C124.546 23.4711 122.875 21.5678 120.106 21.5678C117.302 21.5678 115.52 23.5998 115.52 26.7995C115.52 29.9993 117.265 31.967 120.116 31.967C122.39 31.967 123.98 30.8636 124.428 29.0706H122.537Z" fill="#0A1E30"/>
+                      <path d="M80.8458 28.0762C80.9973 30.535 83.0332 32.1074 86.0632 32.1074C89.3016 32.1074 91.328 30.4587 91.328 27.8284C91.328 25.7604 90.1728 24.6168 87.37 23.9592L85.8644 23.5876C84.0842 23.1683 83.3646 22.606 83.3646 21.6244C83.3646 20.3855 84.4819 19.5754 86.1579 19.5754C87.7487 19.5754 88.8471 20.3664 89.046 21.6339H91.1102C90.9871 19.3181 88.9607 17.6885 86.1863 17.6885C83.2036 17.6885 81.2151 19.3181 81.2151 21.7673C81.2151 23.7877 82.3419 24.9885 84.8133 25.5698L86.5746 25.9987C88.3831 26.4275 89.1785 27.0565 89.1785 28.1048C89.1785 29.3247 87.9286 30.211 86.2242 30.211C84.3967 30.211 83.1279 29.3818 82.948 28.0762H80.8458Z" fill="#0A1E30"/>
+                      <path d="M60.4988 21.5953C59.1467 21.5953 57.9774 22.2758 57.3744 23.4159H57.2282V21.7608H55.3371V35.1024H57.3013V30.2568H57.4566C57.9774 31.3142 59.1011 31.9394 60.5171 31.9394C63.0294 31.9394 64.6282 29.9441 64.6282 26.7628C64.6282 23.5814 63.0294 21.5953 60.4988 21.5953ZM59.9416 30.1648C58.2971 30.1648 57.2648 28.8592 57.2648 26.772C57.2648 24.6756 58.2971 23.3699 59.9507 23.3699C61.6134 23.3699 62.6092 24.648 62.6092 26.7628C62.6092 28.8867 61.6134 30.1648 59.9416 30.1648Z" fill="#0A1E30"/>
+                      <path d="M71.5012 21.5953C70.1491 21.5953 68.9798 22.2758 68.3768 23.4159H68.2306V21.7608H66.3395V35.1024H68.3037V30.2568H68.459C68.9798 31.3142 70.1035 31.9394 71.5195 31.9394C74.0318 31.9394 75.6306 29.9441 75.6306 26.7628C75.6306 23.5814 74.0318 21.5953 71.5012 21.5953ZM70.9439 30.1648C69.2995 30.1648 68.2672 28.8592 68.2672 26.772C68.2672 24.6756 69.2995 23.3699 70.9531 23.3699C72.6158 23.3699 73.6116 24.648 73.6116 26.7628C73.6116 28.8867 72.6158 30.1648 70.9439 30.1648Z" fill="#0A1E30"/>
+                      <path d="M51.813 31.7739H54.0666L49.1333 18.022H46.8513L41.918 31.7739H44.0958L45.3552 28.1239H50.5631L51.813 31.7739ZM47.8834 20.5189H48.0444L50.0234 26.3322H45.8949L47.8834 20.5189Z" fill="#0A1E30"/>
+                      <path d="M43.2383 7.64868V14.2827H45.6181C47.5823 14.2827 48.7197 13.0644 48.7197 10.945C48.7197 8.85778 47.5732 7.64868 45.6181 7.64868H43.2383ZM44.2615 8.58654H45.504C46.8698 8.58654 47.6783 9.46004 47.6783 10.9588C47.6783 12.4805 46.8835 13.3448 45.504 13.3448H44.2615V8.58654Z" fill="#0A1E30"/>
+                      <path d="M52.2032 14.3792C53.6558 14.3792 54.5465 13.4 54.5465 11.7771C54.5465 10.1634 53.6512 9.1796 52.2032 9.1796C50.7506 9.1796 49.8553 10.1634 49.8553 11.7771C49.8553 13.4 50.7461 14.3792 52.2032 14.3792ZM52.2032 13.5011C51.349 13.5011 50.8694 12.8713 50.8694 11.7771C50.8694 10.6921 51.349 10.0577 52.2032 10.0577C53.0528 10.0577 53.537 10.6921 53.537 11.7771C53.537 12.8667 53.0528 13.5011 52.2032 13.5011Z" fill="#0A1E30"/>
+                      <path d="M62.132 9.27614H61.1499L60.2637 13.0965H60.1861L59.1628 9.27614H58.2219L57.1987 13.0965H57.1256L56.2348 9.27614H55.239L56.6094 14.2827H57.6189L58.6421 10.5956H58.7198L59.7475 14.2827H60.7662L62.132 9.27614Z" fill="#0A1E30"/>
+                      <path d="M63.263 14.2827H64.2451V11.3541C64.2451 10.5726 64.7064 10.0853 65.4327 10.0853C66.159 10.0853 66.5062 10.4852 66.5062 11.2898V14.2827H67.4883V11.0415C67.4883 9.85081 66.8762 9.1796 65.7662 9.1796C65.017 9.1796 64.5237 9.5152 64.2816 10.0715H64.2085V9.27614H63.263V14.2827Z" fill="#0A1E30"/>
+                      <path d="M69.035 14.2827H70.0171V7.32227H69.035V14.2827Z" fill="#0A1E30"/>
+                      <path d="M73.7106 14.3792C75.1632 14.3792 76.054 13.4 76.054 11.7771C76.054 10.1634 75.1587 9.1796 73.7106 9.1796C72.2581 9.1796 71.3628 10.1634 71.3628 11.7771C71.3628 13.4 72.2535 14.3792 73.7106 14.3792ZM73.7106 13.5011C72.8565 13.5011 72.3768 12.8713 72.3768 11.7771C72.3768 10.6921 72.8565 10.0577 73.7106 10.0577C74.5603 10.0577 75.0445 10.6921 75.0445 11.7771C75.0445 12.8667 74.5603 13.5011 73.7106 13.5011Z" fill="#0A1E30"/>
+                      <path d="M78.9802 13.5333C78.4457 13.5333 78.0574 13.2712 78.0574 12.8207C78.0574 12.3794 78.3681 12.1449 79.0532 12.0989L80.2683 12.0208V12.4391C80.2683 13.0598 79.7202 13.5333 78.9802 13.5333ZM78.7289 14.3654C79.3821 14.3654 79.9257 14.0804 80.2226 13.5793H80.3003V14.2827H81.2458V10.8622C81.2458 9.80484 80.5424 9.1796 79.2953 9.1796C78.1671 9.1796 77.3631 9.73128 77.2626 10.591H78.2128C78.3224 10.237 78.7015 10.0347 79.2497 10.0347C79.9211 10.0347 80.2683 10.3335 80.2683 10.8622V11.2944L78.9208 11.3725C77.7377 11.4461 77.0708 11.9656 77.0708 12.8667C77.0708 13.7816 77.7697 14.3654 78.7289 14.3654Z" fill="#0A1E30"/>
+                      <path d="M84.5786 14.3654C85.2637 14.3654 85.8439 14.039 86.1408 13.4919H86.2184V14.2827H87.1594V7.32227H86.1773V10.0715H86.1042C85.8347 9.5198 85.2592 9.19339 84.5786 9.19339C83.3224 9.19339 82.5139 10.1956 82.5139 11.7771C82.5139 13.3632 83.3133 14.3654 84.5786 14.3654ZM84.8572 10.0807C85.6794 10.0807 86.1956 10.7381 86.1956 11.7817C86.1956 12.8299 85.684 13.4781 84.8572 13.4781C84.0258 13.4781 83.5279 12.8391 83.5279 11.7771C83.5279 10.7243 84.0304 10.0807 84.8572 10.0807Z" fill="#0A1E30"/>
+                      <path d="M93.528 14.3792C94.9805 14.3792 95.8713 13.4 95.8713 11.7771C95.8713 10.1634 94.976 9.1796 93.528 9.1796C92.0754 9.1796 91.1801 10.1634 91.1801 11.7771C91.1801 13.4 92.0708 14.3792 93.528 14.3792ZM93.528 13.5011C92.6738 13.5011 92.1941 12.8713 92.1941 11.7771C92.1941 10.6921 92.6738 10.0577 93.528 10.0577C94.3776 10.0577 94.8618 10.6921 94.8618 11.7771C94.8618 12.8667 94.3776 13.5011 93.528 13.5011Z" fill="#0A1E30"/>
+                      <path d="M97.1713 14.2827H98.1534V11.3541C98.1534 10.5726 98.6148 10.0853 99.3411 10.0853C100.067 10.0853 100.415 10.4852 100.415 11.2898V14.2827H101.397V11.0415C101.397 9.85081 100.785 9.1796 99.6745 9.1796C98.9254 9.1796 98.432 9.5152 98.1899 10.0715H98.1169V9.27614H97.1713V14.2827Z" fill="#0A1E30"/>
+                      <path d="M105.92 8.03026V9.29913H105.129V10.1313H105.92V12.9586C105.92 13.9241 106.354 14.3102 107.445 14.3102C107.637 14.3102 107.82 14.2873 107.98 14.2597V13.4367C107.843 13.4505 107.756 13.4597 107.605 13.4597C107.117 13.4597 106.902 13.2299 106.902 12.7058V10.1313H107.98V9.29913H106.902V8.03026H105.92Z" fill="#0A1E30"/>
+                      <path d="M109.298 14.2827H110.28V11.3587C110.28 10.6002 110.728 10.0899 111.532 10.0899C112.226 10.0899 112.596 10.4944 112.596 11.2944V14.2827H113.578V11.0507C113.578 9.86001 112.925 9.1842 111.865 9.1842C111.116 9.1842 110.591 9.5198 110.349 10.0807H110.271V7.32227H109.298V14.2827Z" fill="#0A1E30"/>
+                      <path d="M117.121 10.0209C117.847 10.0209 118.322 10.5312 118.345 11.3174H115.833C115.888 10.5358 116.395 10.0209 117.121 10.0209ZM118.341 12.931C118.158 13.3218 117.751 13.5379 117.158 13.5379C116.372 13.5379 115.865 12.9816 115.833 12.1035V12.0483H119.346V11.7035C119.346 10.1313 118.51 9.1796 117.126 9.1796C115.723 9.1796 114.833 10.1956 114.833 11.7955C114.833 13.3954 115.705 14.3792 117.13 14.3792C118.268 14.3792 119.062 13.8275 119.286 12.931H118.341Z" fill="#0A1E30"/>
+                      <path d="M31.2604 20.4876C31.2842 18.6256 32.2778 16.8637 33.854 15.8884C32.8597 14.4591 31.1942 13.5529 29.4614 13.4984C27.6132 13.3031 25.8215 14.6114 24.8797 14.6114C23.9197 14.6114 22.4697 13.5178 20.9082 13.5501C18.873 13.6163 16.9756 14.7809 15.9854 16.5717C13.8568 20.2808 15.4445 25.7318 17.4835 28.7299C18.5036 30.1979 19.6959 31.8378 21.2559 31.7797C22.7825 31.7159 23.3527 30.7999 25.1954 30.7999C27.021 30.7999 27.5559 31.7797 29.1476 31.7427C30.7857 31.7159 31.8178 30.2681 32.8021 28.7861C33.5351 27.74 34.0991 26.5839 34.4733 25.3606C32.5482 24.5411 31.2627 22.5913 31.2604 20.4876Z" fill="#0A1E30"/>
+                      <path d="M28.254 11.5267C29.1471 10.4476 29.5871 9.06054 29.4806 7.66016C28.116 7.8044 26.8556 8.46077 25.9504 9.49849C25.0652 10.5124 24.6045 11.875 24.6916 13.2219C26.0566 13.236 27.3986 12.5974 28.254 11.5267Z" fill="#0A1E30"/>
+                      </svg>
+                   </a>
+                 </div>
+              </div>
+
+             </div>
+
+           </div>
+           
+         </div>
+         <div class="copy ">
+           <div class="container"> 
+             <div class="copy__wrapper">
+              <p> &#64; Lectr, 2021</p>  
+              <span class="copy-slash">/</span>
+              <a class="copy__link" href="">Правила обработки персональных данных</a> 
+              <span class="copy-slash">/</span>
+              <a class="copy__link" href="">Пользовательское соглашение</a>  
+              <span class="copy-slash">/</span>
+              <a class="copy__link" href="">Cookies</a>
+             </div>
+         
+        </div>
+         </div>
+   </footer>
+  </div>
+
+  <script src="js/java.js"></script>
+</body>
+
+</html>

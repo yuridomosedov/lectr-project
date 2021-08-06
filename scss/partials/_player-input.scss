@@ -1,0 +1,56 @@
+@use './config';
+
+input[type=range] {
+    background: linear-gradient(to right, #46D1DA 0%,  #46D1DA 50%, #DAEEFF 50%, #DAEEFF 100%);
+    border-radius: 8px;
+    height: 2px;
+    outline: none;
+    transition: background 450ms ease-in;
+    -webkit-appearance: none;
+}
+ 
+.player__item-line::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background: #46D1DA;
+    cursor: pointer;
+}
+
+.player__item-line::-webkit-slider-runnable-track {
+     cursor: pointer;
+}
+ 
+.player__item-line:hover::-webkit-slider-thumb {
+    background: #46D1DA;
+    height: 12px;
+    width: 12px;
+    @include config.mq-768{
+        height: 20px;
+        width: 20px;
+    }
+}
+
+.player__item-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 0px;
+    width: 0px;
+    border-radius: 50%;
+    background: #46D1DA;
+    cursor: pointer;
+
+}
+
+.player__item-volume::-webkit-slider-runnable-track {
+     cursor: pointer;
+}
+ 
+.player__item-volume:hover::-webkit-slider-thumb {
+    background: #46D1DA;
+    height: 12px;
+    width: 12px;
+     
+}

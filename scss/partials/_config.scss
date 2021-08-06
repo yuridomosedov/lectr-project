@@ -1,0 +1,52 @@
+@mixin mq-768($width: 768px) {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+ 
+ @mixin mq-1024 ($width: 1024px) {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+
+  @mixin mq-1280 ($width: 1280px) {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+
+$main-color:#0A1E30;
+$secondary-color:#DAEEFF;
+$third-color: #F5F6F7;
+$gray: #CED2D6;
+$ff-pt-regular: 'PTRootUIWebRegular';
+$ff-pt-bold:'PTRootUIWebBold';
+ 
+
+@font-face {
+	font-family: 'PTRootUIWebBold';
+	src:
+		url('../../fonts/PT-Root-UI_Bold.woff2') format('woff2'),
+		url('../../fonts/PT-Root-UI_Bold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PTRootUIWebRegular';
+	src:
+		url('../../fonts/PT-Root-UI_Regular.woff2') format('woff2'),
+		url('../../fonts/PT-Root-UI_Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Dela Gothic One';
+	src:
+		url('../../fonts/DelaGothicOne-Regular.ttf');
+		 
+	font-weight: normal;
+	font-style: normal;
+}

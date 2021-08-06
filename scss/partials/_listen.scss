@@ -1,0 +1,120 @@
+@use './config';
+
+
+.listen {
+background-color: config.$secondary-color;
+
+    &__wrapper {
+        display:grid;
+        grid-template-rows: repeat(27, 1fr);
+        max-height: 800px;
+        overflow: hidden;
+        @include config.mq-768{
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr;
+           column-gap: 5rem;
+           overflow: visible;
+        }
+    }
+
+    &__info {
+        padding-top: 3rem;
+        grid-row: 1/-1;
+        grid-column: 1/-1;
+        padding-bottom: 3rem;
+        @include config.mq-768{
+            grid-column: span 1;
+            grid-row: span 1;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+        }
+        &-text {
+             
+            font-family: 'Dela Gothic One';
+            font-size: 2rem;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            @include config.mq-1024{
+                font-size: 3.5rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &-apps {
+            display:flex;
+            @include config.mq-1024{
+                display:block;
+                 
+             }
+        }
+    
+        &-apps-link {
+              flex-grow:1;
+              transition: .2s;
+              @include config.mq-768{
+                flex-grow: 0;
+                 
+             }
+              @include config.mq-1024{
+               flex: 0 0 32%;
+                
+            }
+          &:not(:last-child){
+                margin-right: 0.5rem;
+                @include config.mq-1024{
+                    margin-right: 1.5rem;
+                     
+                 }
+           }
+            
+           &:hover{
+               opacity: 0.9;
+           }
+        }
+
+        &-apps-svg {
+         width:100%;
+         @include config.mq-768{
+            max-width: 175px;
+        }
+           rect{
+              width: 100%;
+              height: 100%;
+             
+           }
+        }
+
+    }
+
+    &__mobile {
+        justify-self: center;
+       grid-row: 1/-8;
+       grid-column: 1/-1;
+        transform: translateY(236px);
+        @include config.mq-768{
+            grid-column: span 1;
+            grid-row: span 1;
+            transform: translateY(0);
+            position:relative;
+            width:100%;
+        }
+    }
+
+    &__mobile-pic {
+        @include config.mq-768{
+            position: absolute;
+            top: -126px;
+            right:0;
+        }
+        @include config.mq-1024{
+             
+            top: -170px;
+            
+        }
+        
+   
+         
+    }
+}
+ 
+ 

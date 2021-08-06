@@ -1,0 +1,88 @@
+@use './config';
+
+.intro {
+    margin-bottom: 3rem;
+    @include config.mq-1280{
+        margin-bottom: 5rem;
+    }
+    &__wrapper {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap:14px;
+        @include config.mq-768{
+            grid-template-columns: 1fr 1fr 1fr;
+            gap:34px;
+            align-items: center;
+        }
+        @include config.mq-1280{
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+
+    &__picture {
+       
+        @include config.mq-1280{
+            padding-left: 3rem;
+        }
+        @include config.mq-1280{
+            grid-column: span 5;
+        }
+        
+    }
+
+    &__text {
+        grid-column: span 2;
+         
+        @include config.mq-768{
+            grid-column: 1 / span 2;
+            grid-row-start: 1;
+            
+        }
+        @include config.mq-1280{
+            grid-column: span 7;
+        }
+        &-title {
+            font-family: 'Dela Gothic One';
+            font-size: 2.25rem;
+            color: config.$main-color;
+            line-height: 1;
+            margin-bottom: 1rem;
+            @include config.mq-768{
+                font-size: 3.8rem;
+                margin-bottom: 2rem;
+            }
+            @include config.mq-1280{
+                font-size: 5.25rem;
+                margin-bottom: 2.5rem;
+            }
+        }
+
+        &-subtitle {
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.3;
+            @include config.mq-768{
+                font-size: 1.25rem;
+                margin-bottom: 1.25rem;
+            }
+            @include config.mq-1280{
+                font-size: 1.5rem;
+                max-width: 65%;
+                
+            }
+        }
+    
+        &-button {
+            color: white;
+            background-color: config.$main-color;
+            &:hover{
+                opacity: 0.9;
+            }
+        }
+
+    }
+
+    
+}
+
+ 

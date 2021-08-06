@@ -1,0 +1,294 @@
+@use './config';
+
+.player {
+background-color: config.$main-color;
+padding-top: 3rem;
+padding-bottom: 3rem;
+margin-bottom: 3rem;
+@include config.mq-1280{
+    padding-bottom: 6rem; 
+   }
+    &__title {
+        font-family: 'Dela Gothic One';
+        font-size: 2rem;
+        line-height: 1;
+        color: white;
+        margin-bottom: 1.5rem;
+        @include config.mq-1280{
+            font-size: 3.5rem;;   
+            margin-bottom: 3rem; 
+           }
+    }
+
+    &__wrapper {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 1rem 1rem 1.5rem 1rem;
+        display:grid;
+        @include config.mq-768{
+            padding: 2rem 2rem 2rem 2rem;
+            grid-template-columns: repeat(6, 1fr);
+             column-gap: 1rem;
+            align-items: start;
+            position: relative;
+        }
+        @include config.mq-1024{
+            
+            grid-template-columns: repeat(10, 1fr);
+             column-gap: 2rem;
+            
+        }
+        @include config.mq-1280{
+         padding-left: 100px;   
+         padding-top: 3rem;
+         padding-bottom: 3rem;
+        }
+    }
+
+    &__pic {
+         
+         position: relative;
+         min-height: 250px;
+          height: 100%;
+           
+           
+        @include config.mq-768{
+            margin-bottom: 0;
+            position: static;
+        }
+        @include config.mq-768{
+            grid-column: span 2;
+        }
+        @include config.mq-1024{
+            grid-column: span 3;
+        }
+        @include config.mq-1280{
+            
+            
+         }
+        &-img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          border-radius: 30px;
+        }
+        &-btn{
+            position: absolute;
+            top:50%;
+            left: -30px;
+            transform: translateY(-50%);
+            @include config.mq-768{
+                left: -20px;
+            }
+            @include config.mq-1280{
+                left: 30px;
+                
+             }
+            
+          &-small{
+            @include config.mq-1280{
+               display:none;
+                
+            }
+          }
+          &-big{
+              display:none;
+              @include config.mq-1280{
+                display:block;
+                
+             }
+          }
+        }
+        &-btn-right{
+            position: absolute;
+            top:50%;
+            right: -30px;
+            transform: translateY(-50%);
+            @include config.mq-768{
+                right: -20px;
+            }
+            @include config.mq-1280{
+                right: 30px;
+                
+             }
+        }
+    }
+
+    &__item {
+         margin-top: 1.2rem;
+        @include config.mq-768{
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: space-between;
+            grid-column: span 4;
+            height: 100%;
+            max-width: 575px;
+            margin-top: 0;
+        }
+        @include config.mq-1024{
+            grid-column: span 7;
+        }
+        &-control {
+            
+            @include config.mq-768{
+                margin-top: auto;
+                background-color:config.$third-color;
+                border-radius: 1rem;
+                padding: 0.5rem 0.5rem 0 0.5rem;
+            }
+            @include config.mq-1024{
+               
+                padding: 1rem;
+            }
+        }
+        &-play{
+            display:flex;
+            align-items: center;
+            margin-bottom: 0.5rem;
+             &-wrap{
+                 display:flex;
+                 flex-wrap: wrap;
+                 width:100%;
+                 justify-content: space-between;
+                 align-items: center;
+                 @include config.mq-768{
+                    flex-wrap:nowrap;
+                }
+             }
+        }
+        &-time{
+             
+            font-size: 10px;
+            display:block;
+            @include config.mq-768{
+                font-size: 14px;
+            }
+            &-start{
+                order: 1;
+            }
+            &-end{
+                order: 3;
+            }
+        }
+        &-pic{
+            margin-left: 1.5rem;
+            margin-right: 0.5rem;
+            display: none;
+            @include config.mq-1024{
+                display:block;
+            }
+        }
+        &-volume{
+            max-width: 10%;
+            display: none;
+            @include config.mq-1024{
+                display:block;
+            }
+        }
+        &-line {
+          width:100%;
+          margin-bottom: 4px;
+          @include config.mq-768{
+            order: 2;
+            margin: 0 1rem;
+        }
+        }
+    
+        &-buttons {
+          
+            display: flex;
+            align-items: center;
+            
+            position: relative;
+            margin-bottom: 1.25rem;
+            @include config.mq-768{
+                margin-bottom: 0px;
+            }
+            
+        }
+    
+        &-buttons-back {
+            margin-left: auto;
+            margin-right: 1rem;
+            @include config.mq-1024{
+                margin-left: 0;
+            }
+        }
+    
+        &-buttons-play {
+            margin-right: 0.8rem;
+            
+        }
+    
+        &-buttons-next {
+            margin-right: auto;
+            @include config.mq-1024{
+                margin-right: 0;
+            }
+        }
+    
+        &-buttons-speed {
+          position: absolute;
+          right:0;
+          @include config.mq-1024{
+            position: static;
+            margin-left: 1.25rem;
+        }
+        }
+    
+        &-text {
+            @include config.mq-1024{
+                max-width: 488px;
+            }
+           
+        }
+    
+        &-tags {
+            margin-bottom: 0.75rem;  
+        }
+    
+        &-tag {
+            border-radius: 4px;
+            font-size: 10px;
+            font-family: config.$ff-pt-bold;
+            background-color: config.$secondary-color;
+            padding: 0.25rem 0.5rem;
+            display: inline;
+            @include config.mq-1024{
+                font-size: 12px;
+            }
+            &:last-child{
+                margin-left: 0.5rem;
+            }
+        }
+    
+        &-title {
+            font-size: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            margin-bottom: 0.5rem;
+            @include config.mq-768{
+                font-size: 2rem;
+            }
+        }
+    
+        &-subtitle {
+            font-size: 14px;
+            @include config.mq-768{
+                font-size: 1rem;
+               
+                margin-bottom: 4px;
+            }
+            @include config.mq-1024{
+                margin-bottom: 1rem;
+              
+            }
+        }
+
+    }
+
+    
+}
+ 
